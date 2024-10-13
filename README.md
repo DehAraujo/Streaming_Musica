@@ -1,7 +1,7 @@
 # Streaming_Musica
 Fases:
 - Levantamento de requisitos
-- Identificação de Entidades e Relacionamentos
+- Identificação de Entidades, Atributos e Relacionamentos
 - Modelo E-R
 - Diagrama E-R
 - Dicionário de dados
