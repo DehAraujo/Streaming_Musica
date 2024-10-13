@@ -1,7 +1,34 @@
-Entidades: Música, Artista, Disco, Usuário, Playlist
-Atributos Música: título, duração (seg), disco, artista.
-Atributos Artista: nome, data_nascimento.
-Atributos Disco: titulo, data_nascimento, artista, musica.
-Atributo ussuário: nome, e-mail, data_registro.
-Atributo Playlist: titulo.
+Entidades: 
+- Música, 
+- Artista, 
+- Disco, 
+- Usuário, 
+- Playlist
+Atributos Música: 
+- título, 
+- duração (seg), 
+- disco, 
+- artista.
+Atributos Artista: 
+- nome, 
+- data_nascimento.
+Atributos Disco: 
+- titulo, 
+- data_nascimento, 
+- artista, 
+- musica.
+Atributo ussuário: 
+- nome, 
+- e-mail, 
+- data_registro.
+Atributo Playlist: 
+- titulo.
 Relacionamentos: 
+- Cada música pertencea um disco específico.
+- Cada música é interpretada por um ou mais artistas.
+- Cada disco pertence a um artista específico.
+- Um disco pode conter várias músicas.
+- Os usuários podem criar e gerenciar playlists.
+- Cada playlist tem um título e pertence a um único usuário.
+- Uma playlist pode conter várias músicas.
+- Uma música pode aparecer em várias playlists.
