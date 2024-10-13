@@ -1,1 +1,7 @@
-
+Entidades: Música, Artista, Disco, Usuário, Playlist
+Atributos Música: título, duração (seg), disco, artista.
+Atributos Artista: nome, data_nascimento.
+Atributos Disco: titulo, data_nascimento, artista, musica.
+Atributo ussuário: nome, e-mail, data_registro.
+Atributo Playlist: titulo.
+Relacionamentos: 
