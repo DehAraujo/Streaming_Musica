@@ -1,0 +1,121 @@
+CREATE DATABASE streaming_sql;
+USE streaming_sql;
+
+CREATE TABLE Musica(
+	id_musica INT unsigned not null auto_increment,
+	titulo VARCHAR(100) not null,
+    duracao INT not null,
+    disco VARCHAR(100) not null,
+    artista VARCHAR(100) not null,
+    PRIMARY KEY (id_musica)
+);
+
+ALTER TABLE Musica MODIFY duracao TIME;
+
+CREATE TABLE Artista(
+	id_artista INT  unsigned not null auto_increment,
+	nome VARCHAR(100),
+    data_nascimento DATE,
+    PRIMARY KEY (id_artista)
+);
+
+
+CREATE TABLE Disco(
+	id_disco INT unsigned not null auto_increment,
+	titulo VARCHAR(100),
+    data_lancamento DATE,
+    artista VARCHAR(100),
+    musica VARCHAR(100),
+    PRIMARY KEY (id_disco)
+);
+
+CREATE TABLE Usuario(
+	id_usuario INT unsigned not null auto_increment,
+	nome VARCHAR(100),
+	e_mail VARCHAR(100),
+    data_registro DATE,
+    PRIMARY KEY (id_usuario)
+);
+
+CREATE TABLE Playlist(
+	titulo VARCHAR(100)
+);
+
+INSERT INTO Musica (titulo, duracao, disco, artista) VALUES 
+	('Arranhao', '00:02:34', 'Manifesto Musical', 'Henrique e Juliano'),
+    ('De Garrafa a Pior', '00:02:43', 'Manifesto Musical', 'Henrique e Juliano'),
+    ('Rasteira', '00:03:10', 'Manifesto Musical', 'Henrique e Juliano'),
+    ('A Maior Saudade', '00:03:11', 'Manifesto Musical', 'Henrique e Juliano'),
+    ('Ate a Proxima Vida', '00:03:15', 'Manifesto Musical', 'Henrique e Juliano' ),
+    
+    ('Carta Branca', '00:03:48', 'Buteco do Gusttavo', 'Gusttavo Lima'),
+	('Pot-Pourri: Pão de Mel / Locutor', '00:03:31', 'Buteco do Gusttavo', 'Gusttavo Lima'),
+	('Tô Por Aí', '00:04:14', 'Buteco do Gusttavo', 'Gusttavo Lima'),
+	('Rumo a Goiânia (part. Leonardo)', '00:03:37', 'Buteco do Gusttavo', 'Gusttavo Lima'),
+	('Fui Fiel', '00:03:20', 'Buteco do Gusttavo', 'Gusttavo Lima'),
+	('A Cor da Esperança', '00:03:43', 'Buteco do Gusttavo', 'Gusttavo Lima'),
+	('Tá Faltando Eu (part. Jorge & Mateus)', '00:03:14', 'Buteco do Gusttavo', 'Gusttavo Lima'),
+	('Jejum de Amor', '00:02:47', 'Buteco do Gusttavo', 'Gusttavo Lima'),
+	('Do Outro Lado da Moeda (part. Zezé Di Camargo & Luciano)', '00:04:03', 'Buteco do Gusttavo', 'Gusttavo Lima'),
+	('Pot-Pourri: Página de Amigos / Tentei Te Esquecer', '00:04:32', 'Buteco do Gusttavo', 'Gusttavo Lima'),
+	('Nem Dormindo Consigo Te Esquecer (part. Bruno & Marrone)', '00:04:18', 'Buteco do Gusttavo', 'Gusttavo Lima'),
+	('Pot-Pourri: Morena Bonita / Cama Fria / Doce Amada (part. Alcino Landim)', '00:06:10', 'Buteco do Gusttavo', 'Gusttavo Lima'),
+	('Pot-Pourri: Leva Minha Timidez / É Amor Demais', '00:03:36', 'Buteco do Gusttavo', 'Gusttavo Lima'),
+	('Buteco do Gusttavo', '00:03:36', 'Buteco do Gusttavo', 'Gusttavo Lima');
+    
+
+INSERT INTO Artista (nome, data_nascimento) VALUES 
+	('Henrique e Juliano', '1989.11.23'),
+    ('João Neto', '1979.08.12'); 
+    
+    
+INSERT INTO Disco (titulo, data_lancamento, artista, musica) VALUES 
+  ('Manifesto Musical', '2022-05-20', 'Henrique e Juliano', 'Arranhao'),
+  ('Manifesto Musical', '2022-05-20', 'Henrique e Juliano', 'De Garrafa a Pior'),
+  ('Manifesto Musical', '2022-05-20', 'Henrique e Juliano', 'Rasteira'),
+  ('Manifesto Musical', '2022-05-20', 'Henrique e Juliano', 'Mundo do Avesso'),
+  ('Manifesto Musical', '2022-05-20', 'Henrique e Juliano', 'Coração de Isca'),
+  ('Manifesto Musical', '2022-05-20', 'Henrique e Juliano', 'Casal de Sapo'),
+  ('Manifesto Musical', '2022-05-20', 'Henrique e Juliano', 'Atração Fatal'),
+  ('Manifesto Musical', '2022-05-20', 'Henrique e Juliano', 'Desapego'),
+  ('Manifesto Musical', '2022-05-20', 'Henrique e Juliano', 'Teu Amor'),
+  ('Manifesto Musical', '2022-05-20', 'Henrique e Juliano', 'Volume 3'),
+  ('Manifesto Musical', '2022-05-20', 'Henrique e Juliano', 'Agradeço a Deus'),
+  ('Manifesto Musical', '2022-05-20', 'Henrique e Juliano', 'Regressiva'),
+  
+  ('Ao Vivo em Vitória', '2014-04-21', 'João Neto e Frederico', 'Eu Sou Aquele'),
+  ('Ao Vivo em Vitória', '2014-04-21', 'João Neto e Frederico', 'Chamam Isso de Traição (Part. Bruno & Marrone)'),
+  ('Ao Vivo em Vitória', '2014-04-21', 'João Neto e Frederico', 'Só Tomando Uma'),
+  ('Ao Vivo em Vitória', '2014-04-21', 'João Neto e Frederico', 'Ele Não Vai Mudar'),
+  ('Ao Vivo em Vitória', '2014-04-21', 'João Neto e Frederico', 'É Só Eu Melhorar (Part. César Menotti & Fabiano)'),
+  ('Ao Vivo em Vitória', '2014-04-21', 'João Neto e Frederico', 'Cama e Casa Separada'),
+  ('Ao Vivo em Vitória', '2014-04-21', 'João Neto e Frederico', 'Última Dose (Part. Cristiano Araújo)'),
+  ('Ao Vivo em Vitória', '2014-04-21', 'João Neto e Frederico', 'Preciso'),
+  ('Ao Vivo em Vitória', '2014-04-21', 'João Neto e Frederico', 'Pode Isso Produção (Part. Henrique & Juliano)'),
+  ('Ao Vivo em Vitória', '2014-04-21', 'João Neto e Frederico', 'É Claro Que Eu Tô'),
+  ('Ao Vivo em Vitória', '2014-04-21', 'João Neto e Frederico', 'Minha Fantasia'),
+  ('Ao Vivo em Vitória', '2014-04-21', 'João Neto e Frederico', 'Presto Pouco (Part. Gregory & Rafael)'),
+  ('Ao Vivo em Vitória', '2014-04-21', 'João Neto e Frederico', 'Engarrafamento'),
+  ('Ao Vivo em Vitória', '2014-04-21', 'João Neto e Frederico', 'Bebeu Fudeu'),
+  
+  ('Buteco do Gusttavo', '2015-07-24', 'Gusttavo Lima', 'Carta Branca'),
+  ('Buteco do Gusttavo', '2015-07-24', 'Gusttavo Lima', 'Pot-Pourri: Pão de Mel / Locutor'),
+  ('Buteco do Gusttavo', '2015-07-24', 'Gusttavo Lima', 'Tô Por Aí'),
+  ('Buteco do Gusttavo', '2015-07-24', 'Gusttavo Lima', 'Rumo a Goiânia (part. Leonardo)'),
+  ('Buteco do Gusttavo', '2015-07-24', 'Gusttavo Lima', 'Fui Fiel'),
+  ('Buteco do Gusttavo', '2015-07-24', 'Gusttavo Lima', 'A Cor da Esperança'),
+  ('Buteco do Gusttavo', '2015-07-24', 'Gusttavo Lima', 'Tá Faltando Eu (part. Jorge & Mateus)'),
+  ('Buteco do Gusttavo', '2015-07-24', 'Gusttavo Lima', 'Jejum de Amor'),
+  ('Buteco do Gusttavo', '2015-07-24', 'Gusttavo Lima', 'Do Outro Lado da Moeda (part. Zezé Di Camargo & Luciano)'),
+  ('Buteco do Gusttavo', '2015-07-24', 'Gusttavo Lima', 'Pot-Pourri: Página de Amigos / Tentei Te Esquecer'),
+  ('Buteco do Gusttavo', '2015-07-24', 'Gusttavo Lima', 'Nem Dormindo Consigo Te Esquecer (part. Bruno & Marrone)'),
+  ('Buteco do Gusttavo', '2015-07-24', 'Gusttavo Lima', 'Pot-Pourri: Morena Bonita / Cama Fria / Doce Amada (part. Alcino Landim)'),
+  ('Buteco do Gusttavo', '2015-07-24', 'Gusttavo Lima', 'Pot-Pourri: Leva Minha Timidez / É Amor Demais'),
+  ('Buteco do Gusttavo', '2015-07-24', 'Gusttavo Lima', 'Buteco do Gusttavo');
+  
+  INSERT INTO Usuario (nome, e_mail, data_registro) VALUES
+	('Deise Araujo', 'd.adrianasaraujo@gmail.com', '2024-10-14');
+SELECT * FROM Musica;
+SELECT * FROM Artista;
+SELECT * FROM Disco;
+SELECT * FROM Usuario;
