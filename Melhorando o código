@@ -1,0 +1,67 @@
+CREATE DATABASE projeto;
+USE projeto;
+
+CREATE TABLE Musica(
+	  id_musica INT,
+	  titulo VARCHAR(100),
+    duracao TIME,
+    id_artista INT,
+    PRIMARY KEY(id_musica)
+    #FOREIGN KEY(id_artista) REFERENCES Artista(id_artista)
+);
+
+CREATE TABLE Artista(
+	  id_artista INT,
+    nome VARCHAR(100),
+    data_nasc DATE,
+    PRIMARY KEY(id_artista)
+);
+
+CREATE TABLE Disco(
+	  id_disco INT,
+    titulo VARCHAR(100),
+    data_lancamento DATE,
+    id_artista INT,
+    PRIMARY KEY(id_disco),
+    FOREIGN key(id_artista) REFERENCES Artista(id_artista)
+);
+
+CREATE TABLE Usuario(
+	  id_usuario INT,
+    nome VARCHAR(100),
+    e_mail VARCHAR(100) UNIQUE,
+    data_registro DATE,
+    PRIMARY KEY(id_usuario)
+    
+);
+
+CREATE TABLE Playlist(
+	  id_playlist INT,
+    titulo VARCHAR(100),
+    id_usuario INT,
+    PRIMARY KEY(id_playlist),
+    FOREIGN KEY(id_usuario) REFERENCES Usuario(id_usuario)
+);
+
+# 1. Liste o título de todas as músicas e suas durações.
+# 2. Encontre o nome de todos os artistas que têm mais de 5 músicas em seu repertório.
+# 3. Quais são os títulos dos discos lançados após 2020?
+# 4. Liste os títulos das músicas e os nomes dos artistas que as interpretam, ordenados pelo título da música.
+# 5. Encontre os títulos das playlists que contêm a música com o título 'Imagine'.
+# 6. Liste os usuários que criaram playlists que contêm músicas do disco 'Abbey Road'.
+# 7. Qual é a duração média das músicas de um artista específico?
+# 8. Encontre todos os artistas que não têm músicas.
+# 9. Liste todos os discos que contêm mais de 10 músicas.
+# 10. Quais são os nomes dos artistas que têm discos lançados antes de 2010 e que têm músicas na playlist 'Top 50'?
+# 11. Quais músicas são interpretadas por mais de um artista?
+# 12. Liste os títulos das músicas que aparecem em mais de uma playlist.
+# 13. Encontre os nomes dos usuários que têm playlists que incluem a música 'Bohemian Rhapsody'.
+# 14. Qual é o título da música mais longa do disco 'Dark Side of the Moon'?
+# 15. Liste todos os discos lançados por um artista específico em um determinado ano.
+# 16. Quais são os nomes dos artistas que têm músicas em playlists criadas por um usuário específico?
+# 17. Encontre a lista de músicas que não estão em nenhuma playlist.
+# 18. Liste os títulos das músicas e os nomes dos artistas que têm mais de 3 músicas em uma mesma playlist.
+# 19. Quais são os discos que contêm músicas de artistas que têm pelo menos 2 discos lançados?
+# 20. Liste todos os usuários e suas playlists, mas apenas para playlists que contêm pelo menos 5 músicas?
+
+
