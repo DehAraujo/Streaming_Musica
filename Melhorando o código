@@ -1,56 +1,127 @@
-CREATE DATABASE projeto;
-USE projeto;
-
-CREATE TABLE Musica(
-	  id_musica INT,
-	  titulo VARCHAR(100),
-    duracao TIME,
-    id_artista INT,
-    PRIMARY KEY(id_musica)
-    #FOREIGN KEY(id_artista) REFERENCES Artista(id_artista)
-);
+CREATE DATABASE teste1;
+USE teste1;
 
 CREATE TABLE Artista(
-	  id_artista INT,
-    nome VARCHAR(100),
-    data_nasc DATE,
+	id_artista INT unsigned not null auto_increment,
+    nome VARCHAR(100) not null,
+    data_nasc DATE not null,
     PRIMARY KEY(id_artista)
 );
 
 CREATE TABLE Disco(
-	  id_disco INT,
-    titulo VARCHAR(100),
-    data_lancamento DATE,
-    id_artista INT,
+	id_disco INT unsigned not null auto_increment,
+    titulo VARCHAR(100) not null,
+    data_lancamento DATE not null,
+    id_artista INT unsigned,
     PRIMARY KEY(id_disco),
     FOREIGN key(id_artista) REFERENCES Artista(id_artista)
 );
 
+CREATE TABLE Musica(
+	id_musica INT unsigned not null auto_increment,
+	titulo VARCHAR(100) not null,
+    duracao TIME not null,
+    id_artista INT unsigned,
+    id_disco INT unsigned,
+    PRIMARY KEY(id_musica),
+    FOREIGN KEY(id_artista) REFERENCES Artista(id_artista),
+    FOREIGN KEY (id_disco) REFERENCES Disco(id_disco)
+);
+
+
 CREATE TABLE Usuario(
-	  id_usuario INT,
-    nome VARCHAR(100),
-    e_mail VARCHAR(100) UNIQUE,
-    data_registro DATE,
+	id_usuario INT unsigned not null auto_increment,
+    nome VARCHAR(100) not null,
+    e_mail VARCHAR(100) UNIQUE not null,
+    data_registro DATE not null,
     PRIMARY KEY(id_usuario)
     
 );
 
 CREATE TABLE Playlist(
-	  id_playlist INT,
-    titulo VARCHAR(100),
+	id_playlist INT unsigned not null auto_increment,
+    titulo VARCHAR(100) not null,
     id_usuario INT,
     PRIMARY KEY(id_playlist),
     FOREIGN KEY(id_usuario) REFERENCES Usuario(id_usuario)
 );
 
+CREATE TABLE MusicaArtista(
+	id_musicaartista INT unsigned not null auto_increment,
+	id_musica INT,
+    id_artista INT,
+    PRIMARY KEY(id_musicaartista),
+    FOREIGN KEY(id_musica) REFERENCES Musica(id_musica),
+    FOREIGN KEY(id_artista) REFERENCES Artista(id_artista)
+);
+
+INSERT INTO MusicaArtista VALUES ();
+
+
+
+INSERT INTO Musica(titulo, duracao) VALUES 
+	('Arranhao', '00:02:34'),
+    ('De Garrafa a Pior', '00:02:43'),
+	('Rasteira', '00:03:10'),
+	('A Maior Saudade', '00:03:11'),
+	('Ate a Proxima Vida', '00:03:15'),
+	('Carta Branca', '00:03:48'),
+	('Pot-Pourri: Pão de Mel / Locutor', '00:03:31'),
+	('Tô Por Aí', '00:04:14'),
+	('Rumo a Goiânia (part. Leonardo)', '00:03:37'),
+	('Fui Fiel', '00:03:20'),
+	('A Cor da Esperança', '00:03:43'),
+	('Tá Faltando Eu (part. Jorge & Mateus)', '00:03:14'),
+	('Jejum de Amor', '00:02:47'),
+	('Do Outro Lado da Moeda (part. Zezé Di Camargo & Luciano)', '00:04:03'),
+	('Pot-Pourri: Página de Amigos / Tentei Te Esquecer', '00:04:32'),
+	('Nem Dormindo Consigo Te Esquecer (part. Bruno & Marrone)', '00:04:18'),
+	('Pot-Pourri: Morena Bonita / Cama Fria / Doce Amada (part. Alcino Landim)', '00:06:10'),
+	('Pot-Pourri: Leva Minha Timidez / É Amor Demais', '00:03:36'),
+	('Buteco do Gusttavo', '00:03:36');
+
+		
+INSERT INTO Artista (nome, data_nasc) VALUES 
+	('Henrique e Juliano', '1989-11-23'),
+    ('João Neto', '1979-08-12'); 
+    
+    
+INSERT INTO Disco (titulo, data_lancamento) VALUES 
+	('Manifesto Musical', '2022-05-20'),
+    ('Ao Vivo em Vitória', '2014-04-21');
+  
+  
+    
 # 1. Liste o título de todas as músicas e suas durações.
+SELECT * FROM MusicaArtista;
+SELECT 
+	titulo, 
+    duracao 
+FROM 
+	Musica; 
+
 # 2. Encontre o nome de todos os artistas que têm mais de 5 músicas em seu repertório.
+SELECT 
+	a.id_artista,
+    a.nome,
+    COUNT(m.id_musica) AS Quantidade_Musicas
+FROM
+	Artista a
+JOIN
+	Artista a ON a.id_artista = m.id_artista
+GROUP BY 
+	a.id_artista
+HAVING
+	Quantidade_musicas > 5;
+
+
+    
 # 3. Quais são os títulos dos discos lançados após 2020?
 # 4. Liste os títulos das músicas e os nomes dos artistas que as interpretam, ordenados pelo título da música.
 # 5. Encontre os títulos das playlists que contêm a música com o título 'Imagine'.
 # 6. Liste os usuários que criaram playlists que contêm músicas do disco 'Abbey Road'.
 # 7. Qual é a duração média das músicas de um artista específico?
-# 8. Encontre todos os artistas que não têm músicas.
+#8. Encontre todos os artistas que não têm músicas.
 # 9. Liste todos os discos que contêm mais de 10 músicas.
 # 10. Quais são os nomes dos artistas que têm discos lançados antes de 2010 e que têm músicas na playlist 'Top 50'?
 # 11. Quais músicas são interpretadas por mais de um artista?
