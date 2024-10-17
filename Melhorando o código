@@ -54,7 +54,14 @@ INSERT INTO Artista (artista_nome, artista_data) VALUES
 	('Henrique e Juliano', '1989-11-23'),
     ('João Neto', '1979-08-12'),
     ('Gustavo Lima', '1989-09-03'),
-    ('Bruno e Marrone', '1964-11-09');
+    ('Bruno e Marrone', '1964-11-09'),
+    ('Henrique e Juliano', '1989-11-23'),
+	('Thiaguinho', '1984-09-03'),
+    ('Jorge & Mateus', '2006-11-10'),
+    ('Ivete Sangalo', '1972-05-27'),
+    ('Marília Mendonça', '1995-07-22'),
+    ('Zezé Di Camargo', '1962-08-27')
+    ;
 
 INSERT INTO Disco (disco_titulo, disco_data, id_artista) VALUES 
 	('Manifesto Musical', '2022-05-20', 1),
