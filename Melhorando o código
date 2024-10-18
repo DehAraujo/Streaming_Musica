@@ -1,5 +1,5 @@
-CREATE DATABASE teste6;
-USE teste6;
+CREATE DATABASE novo3;
+USE novo3;
 
 CREATE TABLE Artista(
 	id_artista INT unsigned not null auto_increment,
@@ -44,30 +44,41 @@ CREATE TABLE Playlist(
     FOREIGN KEY(id_usuario) REFERENCES Usuario(id_usuario)
 );
 
-CREATE TABLE Musicas_Playlist(
+
+
+
+
+CREATE TABLE Musica_playlist(
 	id_musicaplaylist INT unsigned not null auto_increment,
-    id_musica INT unique,
-    PRIMARY KEY(id_musicaplaylist),
-    FOREIGN KEY(id_musica) REFERENCES Musica(id_musica)
-); 
+    id_musica INT unsigned,
+    id_playlist INT unsigned,
+    id_usuario INT unsigned,
+    PRIMARY KEY(id_musicaplaylist, id_musica, id_playlist),
+    FOREIGN KEY(id_musica) REFERENCES Musica(id_musica),
+	FOREIGN KEY(id_playlist) REFERENCES Usuario(id_playlist),
+    FOREIGN KEY(id_usuario) REFERENCES Usuario(id_usuario)
+);
+
+ALTER TABLE Musica_Playlist
+ADD id_playlist INT unsigned;
+select * from Musica_Playlist;
+
+ALTER TABLE Musica_playlist
+
+    
+    
+    SELECT * from Musica;
+    select * from Playlist;
+    
 INSERT INTO Artista (artista_nome, artista_data) VALUES 
 	('Henrique e Juliano', '1989-11-23'),
-    ('João Neto', '1979-08-12'),
     ('Gustavo Lima', '1989-09-03'),
-    ('Bruno e Marrone', '1964-11-09'),
-    ('Henrique e Juliano', '1989-11-23'),
-	('Thiaguinho', '1984-09-03'),
-    ('Jorge & Mateus', '2006-11-10'),
-    ('Ivete Sangalo', '1972-05-27'),
-    ('Marília Mendonça', '1995-07-22'),
-    ('Zezé Di Camargo', '1962-08-27')
-    ;
+    ('João Neto', '1979-08-12');
 
 INSERT INTO Disco (disco_titulo, disco_data, id_artista) VALUES 
 	('Manifesto Musical', '2022-05-20', 1),
-    ('Ao Vivo em Vitória', '2014-04-21', 2),
-    ('Buteco do Gustavo', '2015-07-24', 3),
-    ('Revivem sua Historia', '2023-06-23', 4);
+    ('Buteco do Gustavo', '2015-07-24', 2),
+    ('Ao Vivo em Vitória', '2014-04-21', 3);
 
 INSERT INTO Musica(musica_titulo, musica_duracao, id_artista, id_disco) VALUES 
 	#Henrique e Juliano
@@ -114,67 +125,119 @@ INSERT INTO Musica(musica_titulo, musica_duracao, id_artista, id_disco) VALUES
     ('Minha Fantasia', '00:03:25', 3, 3),
     ('Presto Pouco (Part. Gregory & Rafael)', '00:03:00', 3, 3),
     ('Engarrafamento', '00:03:10', 3, 3),
-    ('Bebeu Fudeu', '00:02:50', 3, 3),
+    ('Bebeu Fudeu', '00:02:50', 3, 3);
     
-    #Bruno e Marrone
-    ('Amor Não é Jogo de Azar (Ao Vivo)', '00:03:24', 4, 4),
-    ('Faz de Conta (Ao Vivo)', '00:03:14', 4, 4),
-    ('Inevitável (Ao Vivo)', '00:03:41', 4, 4),
-    ('Como Eu Te Amo (Ao Vivo)', '00:03:44', 4, 4),
-    ('Agarrada em Mim (Ao Vivo)', '00:03:44', 4, 4),
-    ('Coração de Pedra (Ao Vivo)', '00:03:29', 4, 4),
-    ('Faz Moleque Virar Homem (Ao Vivo)', '00:02:45', 4, 4),
-    ('Se Tiver Coragem Joga Fora (Ao Vivo)', '00:03:29', 4, 4),
-    ('Ficar por Ficar (Ao Vivo)', '00:02:43', 4, 4),
-    ('Parabéns pro nosso amor (Ao Vivo)', '00:03:32', 4, 4),
-    ('Pago Calado (Ao Vivo)', '00:03:47', 4, 4),
-    ('Se Não Tivesse Ido (Ao Vivo)', '00:04:14', 4, 4),
-    ('Por Te Amar Demais (Ao Vivo)', '00:04:02', 4, 4),
-    ('Choram as Rosas (Ao Vivo)', '00:03:52', 4, 4),
-    ('Sóbrio Bêbado (Ao Vivo)', '00:03:03', 4, 4),
-    ('Preciso Amar de Novo (Ao Vivo)', '00:03:38', 4, 4),
-    ('Feito Paisagem (Ao Vivo)', '00:03:10', 4, 4),
-    ('Vem Me Buscar (Ao Vivo)', '00:03:31', 4, 4),
-    ('Saudade Veia (Ao Vivo Em Belo Horizonte)', '00:02:39', 4, 4),
-    ('Um Sonho Louco (Ao Vivo Em Belo Horizonte)', '00:03:13', 4, 4),
-    ('Cilada de Amor (Ao Vivo Em Belo Horizonte)', '00:03:27', 4, 4),
-    ('Sonhos Perdidos (Ao Vivo Em Belo Horizonte)', '00:03:15', 4, 4),
-    ('Bar Solidão (Ao Vivo Em Belo Horizonte)', '00:03:33', 4, 4),
-    ('Queremos Mais (Ao Vivo Em Belo Horizonte)', '00:04:00', 4, 4);
+    INSERT INTO Usuario(usuario_nome, usuario_email, usuario_dataregistro) VALUES
+    ('Alice Pires', 'alice.pires@gmail.com',  '2016-01-10'),
+    ('Bruno Silva', 'bruno.silva@hotmail.com', '2017-03-22'),
+    ('Carlos Souza', 'carlos.souza@yahoo.com', '2018-07-14'),
+    ('Daniela Costa', 'daniela.costa@outlook.com', '2019-01-30'),
+    ('Eduardo Lima', 'eduardo.lima@gmail.com', '2020-05-21'),
+    ('Fernanda Gomes', 'fernanda.gomes@hotmail.com', '2016-11-12'),
+    ('Gabriel Almeida', 'gabriel.almeida@yahoo.com', '2017-02-28'),
+    ('Helena Santos', 'helena.santos@outlook.com', '2018-09-05'),
+    ('Igor Ferreira', 'igor.ferreira@gmail.com', '2019-06-17'),
+    ('Julia Oliveira', 'julia.oliveira@hotmail.com', '2020-08-22'),
+    ('Kleber Martins', 'kleber.martins@yahoo.com', '2016-12-09'),
+    ('Larissa Rodrigues', 'larissa.rodrigues@outlook.com', '2017-04-11'),
+    ('Marcos Dias', 'marcos.dias@gmail.com', '2018-01-20'),
+    ('Natalia Barbosa', 'natalia.barbosa@hotmail.com', '2019-03-13'),
+    ('Otavio Pereira', 'otavio.pereira@yahoo.com', '2020-10-15'),
+    ('Patricia Melo', 'patricia.melo@outlook.com', '2016-02-26'),
+    ('Ricardo Carvalho', 'ricardo.carvalho@gmail.com', '2017-05-08'),
+    ('Sabrina Rocha', 'sabrina.rocha@hotmail.com', '2018-06-29'),
+    ('Thiago Fernandes', 'thiago.fernandes@yahoo.com', '2019-07-18'),
+    ('Vanessa Araujo', 'vanessa.araujo@outlook.com', '2020-11-01');
     
     INSERT INTO Playlist(playlist_titulo, id_usuario) VALUES
-		('Sertanejo', 1),
-		('Henrique', 2),
-		('Favoritas', 3),
-		('Rock Clássico', 1),
-		('Pop Hits', 2),
-		('Músicas Românticas', 3),
-		('Funk Brasileiro', 1),
-		('Indie Alternativo', 2),
-		('Anos 80', 3),
-		('Baladas Internacionais', 1),
-		('Música Eletrônica', 2),
-		('Samba de Raiz', 3),
-		('MPB Clássicos', 1),
-		('Sertanejo Universitário', 2),
-		('Trilhas Sonoras', 3);
-	
-    INSERT INTO Usuario(usuario_nome, usuario_email, usuario_dataregistro) VALUES
-		('Alice Silva', 'alice.silva@email.com', '2024-01-01'),
-		('Bruno Costa', 'bruno.costa@email.com', '2024-01-02'),
-		('Carla Oliveira', 'carla.oliveira@email.com', '2024-01-03'),
-		('Daniela Santos', 'daniela.santos@email.com', '2024-01-04'),
-		('Eduardo Lima', 'eduardo.lima@email.com', '2024-01-05'),
-		('Fernanda Rocha', 'fernanda.rocha@email.com', '2024-01-06'),
-		('Gabriel Almeida', 'gabriel.almeida@email.com', '2024-01-07'),
-		('Helena Martins', 'helena.martins@email.com', '2024-01-08'),
-		('Igor Ferreira', 'igor.ferreira@email.com', '2024-01-09'),
-		('Juliana Mendes', 'juliana.mendes@email.com', '2024-01-10');
-        
-        select * from Usuario;
-        select * from Playlist;
-			
-
+	('Favoritas', 1),
+    ('Sertanejo', 2),
+    ('So as melhores', 3),
+    ('Henrique', 1),
+    ('Insqueciveis', 4),
+    ('So nostalgia', 5),
+    ('Legiao', 6),
+    ('Good time', 7),
+    ('Marilha', 8);
+    
+    INSERT INTO Musica_Playlist(id_usuario, id_musica, id_playlist) VALUES 
+	#Usuario 1
+    (1,1,1),
+    (1,5,1),
+    (1,8,1),
+    (1,9,1),
+    (1,10,1),
+    (1,28,1),
+    (1,10,1),
+    (1, 1, 1),
+    (1, 2, 1),
+    (1, 3, 1),
+    (1, 4, 1),
+    (1, 5, 1),
+    (1, 6, 1),
+    (1, 7, 1),
+    (1, 8, 1),
+    (1, 9, 1),
+    (1, 10, 1),
+    
+    #Usuario2
+    (2, 11, 2),
+    (2, 12, 2),
+    (2, 13, 2),
+    (2, 14, 2),
+    (2, 15, 2),
+    (2, 16, 2),
+    (2, 17, 2),
+    (2, 18, 2),
+    (2, 19, 2),
+    
+    #Usuario3
+    (3, 21, 3),
+    (3, 22, 3),
+    (3, 23, 3),
+    (3, 24, 3),
+    (3, 25, 3),
+    (3, 26, 3),
+    (3, 27, 3),
+    (3, 28, 3),
+    (3, 29, 3),
+    (3, 30, 3),
+    
+    #Usuario4
+    (4, 31, 4),
+    (4, 32, 4),
+    (4, 33, 4),
+    (4, 34, 4),
+    (4, 35, 4),
+    (4, 36, 4),
+    (4, 37, 4),
+    (4, 38, 4),
+    (4, 39, 4),
+    (4, 40, 4),
+    
+    #Usuario5
+    (5, 1, 5),
+    (5, 2, 5),
+    (5, 3, 5),
+    (5, 4, 5),
+    (5, 5, 5),
+    (5, 6, 5),
+    (5, 7, 5),
+    (5, 8, 5),
+    (5, 9, 5),
+    
+    (6, 11, 6),
+    (6, 12, 6),
+    (6, 35, 6),
+    (6, 14, 6),
+    (6, 15, 6),
+    (6, 16, 6),
+    (6, 40, 6),
+    (6, 18, 6),
+    (6, 19, 6),
+    (6, 20, 6);
+    
+    
  # 1. Liste o título de todas as músicas e suas durações.   
 	SELECT 
 		musica_titulo, 
@@ -206,21 +269,22 @@ INSERT INTO Musica(musica_titulo, musica_duracao, id_artista, id_disco) VALUES
 	WHERE
 		disco_data > '2020-12-31';
 		
-        
 # 4. Liste os títulos das músicas e os nomes dos artistas que as interpretam, ordenados pelo título da música.
-	SELECT DISTINCT
-		m.musica_titulo,
-		a.artista_nome
-	FROM 
-		Musica m
-	JOIN
-		Artista a ON a.id_artista = m.id_artista
-	ORDER BY 
-		m.musica_titulo;
-		
-		SELEct distinct * from Artista;
+SELECT
+	m.musica_titulo,
+    a.artista_nome
+FROM 
+	Musica m
+JOIN Artista a ON a.id_artista = m.id_artista
+ORDER BY musica_titulo;
 
+select * from Musica;
+    
 # 5. Encontre os títulos das playlists que contêm a música com o título 'Imagine'.
+SELECT 
+
+
+
 
 
 # 6. Liste os usuários que criaram playlists que contêm músicas do disco 'Abbey Road'.
@@ -238,5 +302,4 @@ INSERT INTO Musica(musica_titulo, musica_duracao, id_artista, id_disco) VALUES
 # 18. Liste os títulos das músicas e os nomes dos artistas que têm mais de 3 músicas em uma mesma playlist.
 # 19. Quais são os discos que contêm músicas de artistas que têm pelo menos 2 discos lançados?
 # 20. Liste todos os usuários e suas playlists, mas apenas para playlists que contêm pelo menos 5 músicas?
-
 
