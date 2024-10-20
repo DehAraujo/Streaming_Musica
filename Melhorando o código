@@ -1,5 +1,5 @@
-CREATE DATABASE deise;
-USE deise;
+CREATE DATABASE adriana1;
+USE adriana1;
 
 CREATE TABLE Artista(
 	id_artista INT unsigned not null auto_increment,
@@ -326,75 +326,153 @@ HAVING
 
 
 # 9. Liste todos os discos que contêm mais de 10 músicas.
-SELECT d.disco_titulo,
-COUNT(m.id_musica) AS Numero_Musicas
-FROM Disco d
-JOIN Musica m ON d.id_disco = m.id_disco
-GROUP BY d.disco_titulo
-HAVING COUNT(m.id_musica) > 10;
+SELECT
+	d.disco_titulo,
+	COUNT(m.id_musica) AS Numero_Musicas
+FROM
+	Disco d
+JOIN
+	Musica m ON d.id_disco = m.id_disco
+GROUP BY
+	d.disco_titulo
+HAVING 
+	COUNT(m.id_musica) > 10;
 
 # 10. Quais são os nomes dos artistas que têm discos lançados antes de 2010 e que têm músicas na playlist 'Top 50'?
 SELECT a.artista_nome, d.disco_data
-FROM Artista a
-JOIN Disco d ON a.id_artista = d.id_artista
-WHERE d.disco_data <= '2015-12-31' ;
+FROM 
+	Artista a
+JOIN
+	Disco d ON a.id_artista = d.id_artista
+WHERE
+	d.disco_data <= '2015-12-31' ;
 #Colocar Discos antes de 2009
 
 # 11. Quais músicas são interpretadas por mais de um artista?
 #Arrumar o codigo para isso
 
 # 12. Liste os títulos das músicas que aparecem em mais de uma playlist.
-SELECT m.musica_titulo, p.playlist_titulo
-FROM Playlist p
-JOIN Musica_Playlist mp ON p.id_playlist = mp.id_playlist
-JOIN Musica m ON mp.id_musica = m.id_musica;
+SELECT 
+	m.musica_titulo, p.playlist_titulo
+FROM
+	Playlist p
+JOIN
+	Musica_Playlist mp ON p.id_playlist = mp.id_playlist
+JOIN
+	Musica m ON mp.id_musica = m.id_musica;
 
 # 13. Encontre os nomes dos usuários que têm playlists que incluem a música 'Ele não vai mudar'.
-SELECT u.usuario_nome, p.playlist_titulo, m.musica_titulo
-FROM Usuario u
-JOIN Playlist p ON u.id_usuario = p.id_usuario
-JOIN Musica_playlist mp ON mp.id_playlist = p.id_playlist
-JOIN Musica m ON mp.id_musica = m.id_musica
-WHERE m.musica_titulo = 'Ele Não Vai Mudar';
+SELECT 
+	u.usuario_nome, p.playlist_titulo, m.musica_titulo
+FROM 
+	Usuario u
+JOIN 
+	Playlist p ON u.id_usuario = p.id_usuario
+JOIN
+	Musica_playlist mp ON mp.id_playlist = p.id_playlist
+JOIN 
+	Musica m ON mp.id_musica = m.id_musica
+WHERE 
+	m.musica_titulo = 'Ele Não Vai Mudar';
 
 # 14. Qual é o título da música mais longa do disco 'Manifesto Musical'?
-SELECT m.musica_titulo, m.musica_duracao
-FROM Musica m
-JOIN Disco d ON m.id_disco = d.id_disco
-WHERE d.disco_titulo = 'Manifesto Musical'
-ORDER BY m.musica_duracao DESC
+SELECT 
+	m.musica_titulo, m.musica_duracao
+FROM
+	Musica m
+JOIN
+	Disco d ON m.id_disco = d.id_disco
+WHERE
+	d.disco_titulo = 'Manifesto Musical'
+ORDER BY
+	m.musica_duracao DESC
 LIMIT 1;
 
 # 15. Liste todos os discos lançados por um artista específico em um determinado ano.
 SELECT *
-FROM Disco d
-JOIN Artista a ON d.id_artista = a.id_artista
-WHERE d.disco_data BETWEEN '2021-01-01' AND '2023-12-31';
+FROM 
+	Disco d
+JOIN
+	Artista a ON d.id_artista = a.id_artista
+WHERE 
+	d.disco_data BETWEEN '2021-01-01' AND '2023-12-31';
 
 # 16. Quais são os nomes dos artistas que têm músicas em playlists criadas por um usuário específico?
 SELECT DISTINCT a.artista_nome, m.musica_titulo
-FROM Musica_Playlist mp
-JOIN  Musica m ON mp.id_musica = m.id_musica
-JOIN Playlist p ON mp.id_playlist = p.id_playlist
-JOIN Usuario u ON mp.id_usuario = u.id_usuario
-JOIN Artista a ON m.id_artista = a.id_artista
-WHERE u.usuario_nome = 'Alice Pires';
-
-
+FROM 
+	Musica_Playlist mp
+JOIN 
+	Musica m ON mp.id_musica = m.id_musica
+JOIN
+	Playlist p ON mp.id_playlist = p.id_playlist
+JOIN
+	Usuario u ON mp.id_usuario = u.id_usuario
+JOIN
+	Artista a ON m.id_artista = a.id_artista
+WHERE
+	u.usuario_nome = 'Alice Pires';
 
 # 17. Encontre a lista de músicas que não estão em nenhuma playlist.
-
+SELECT 
+	m.musica_titulo
+FROM 
+	Musica m
+WHERE m.id_musica NOT IN (
+    SELECT 
+		mp.id_musica
+    FROM
+		Musica_Playlist mp
+);
 
 # 18. Liste os títulos das músicas e os nomes dos artistas que têm mais de 3 músicas em uma mesma playlist.
-SELECT m.musica_titulo, a.artista_nome, p.id_playlist,
-COUNT(m.id_musica) AS Numero_Musicas
-FROM Musica_Playlist mp
-JOIN Playlist p ON mp.id_playlist = p.id_playlist
-JOIN Musica m ON mp.id_musica = m.id_musica
-JOIN Artista a ON m.id_artista = a.id_artista
-GROUP BY m.musica_titulo, a.artista_nome, p.playlist_titulo
-HAVING COUNT(m.id_musica) > 3 ;
-
+SELECT 
+	p.playlist_titulo,
+	m.musica_titulo,
+    a.artista_nome    
+FROM 
+    Musica_Playlist mp
+JOIN 
+    Musica m ON mp.id_musica = m.id_musica
+JOIN 
+    Artista a ON m.id_artista = a.id_artista
+JOIN 
+    Playlist p ON mp.id_playlist = p.id_playlist
+WHERE 
+    (a.artista_nome, p.id_playlist) IN (
+        SELECT 
+            a2.artista_nome,
+            p2.id_playlist
+        FROM 
+            Musica_Playlist mp2
+        JOIN 
+            Musica m2 ON mp2.id_musica = m2.id_musica
+        JOIN 
+            Artista a2 ON m2.id_artista = a2.id_artista
+        JOIN 
+            Playlist p2 ON mp2.id_playlist = p2.id_playlist
+        GROUP BY 
+            a2.artista_nome, p2.id_playlist
+        HAVING 
+            COUNT(m2.id_musica) > 3
+    )
+ORDER BY 
+    p.playlist_titulo, m.musica_titulo, a.artista_nome; 
 
 # 19. Quais são os discos que contêm músicas de artistas que têm pelo menos 2 discos lançados?
 # 20. Liste todos os usuários e suas playlists, mas apenas para playlists que contêm pelo menos 5 músicas?
+SELECT 
+    u.usuario_nome, 
+    p.playlist_titulo,
+    COUNT(mp.id_musica) AS Numero_musicas
+FROM 
+    Usuario u
+JOIN 
+    Playlist p ON u.id_usuario = p.id_usuario
+JOIN 
+    Musica_Playlist mp ON p.id_playlist = mp.id_playlist
+GROUP BY 
+    u.usuario_nome, p.playlist_titulo
+HAVING 
+    COUNT(mp.id_musica) >= 5
+ORDER BY 
+    u.usuario_nome, p.playlist_titulo;
