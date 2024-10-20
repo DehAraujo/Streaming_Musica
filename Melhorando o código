@@ -366,9 +366,22 @@ ORDER BY m.musica_duracao DESC
 LIMIT 1;
 
 # 15. Liste todos os discos lançados por um artista específico em um determinado ano.
-
+SELECT *
+FROM Disco d
+JOIN Artista a ON d.id_artista = a.id_artista
+WHERE d.disco_data BETWEEN '2021-01-01' AND '2023-12-31';
 
 # 16. Quais são os nomes dos artistas que têm músicas em playlists criadas por um usuário específico?
+SELECT DISTINCT a.artista_nome, m.musica_titulo
+FROM Musica_Playlist mp
+JOIN  Musica m ON mp.id_musica = m.id_musica
+JOIN Playlist p ON mp.id_playlist = p.id_playlist
+JOIN Usuario u ON mp.id_usuario = u.id_usuario
+JOIN Artista a ON m.id_artista = a.id_artista
+WHERE u.usuario_nome = 'Alice Pires';
+
+
+
 # 17. Encontre a lista de músicas que não estão em nenhuma playlist.
 # 18. Liste os títulos das músicas e os nomes dos artistas que têm mais de 3 músicas em uma mesma playlist.
 # 19. Quais são os discos que contêm músicas de artistas que têm pelo menos 2 discos lançados?
