@@ -383,6 +383,18 @@ WHERE u.usuario_nome = 'Alice Pires';
 
 
 # 17. Encontre a lista de músicas que não estão em nenhuma playlist.
+
+
 # 18. Liste os títulos das músicas e os nomes dos artistas que têm mais de 3 músicas em uma mesma playlist.
+SELECT m.musica_titulo, a.artista_nome, p.id_playlist,
+COUNT(m.id_musica) AS Numero_Musicas
+FROM Musica_Playlist mp
+JOIN Playlist p ON mp.id_playlist = p.id_playlist
+JOIN Musica m ON mp.id_musica = m.id_musica
+JOIN Artista a ON m.id_artista = a.id_artista
+GROUP BY m.musica_titulo, a.artista_nome, p.playlist_titulo
+HAVING COUNT(m.id_musica) > 3 ;
+
+
 # 19. Quais são os discos que contêm músicas de artistas que têm pelo menos 2 discos lançados?
 # 20. Liste todos os usuários e suas playlists, mas apenas para playlists que contêm pelo menos 5 músicas?
