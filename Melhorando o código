@@ -75,7 +75,12 @@ ALTER TABLE Musica_playlist
 INSERT INTO Artista (artista_nome, artista_data) VALUES 
 	('Henrique e Juliano', '1989-11-23'),
     ('Gustavo Lima', '1989-09-03'),
-    ('João Neto', '1979-08-12');
+    ('João Neto', '1979-08-12')
+('Marilha Mendonca', '1995-07-22')
+('Renato Russo', '1960-03-27')
+('Marcelo Falcao', 1973-05-31')
+('Luana Prado','1989-05-25')
+('Dinho Ouro Preto', '1964-04-27');
 
 INSERT INTO Disco (disco_titulo, disco_data, id_artista) VALUES 
 	('Manifesto Musical', '2022-05-20', 1),
@@ -87,7 +92,9 @@ INSERT INTO Disco (disco_titulo, disco_data, id_artista) VALUES
 ('O Rappa', '1994-10-19', 6),
 ('Acustico MTV', '2005-07-14', 6),
 ('Lado B Lado A', '1999-09-15', 6),
-('7 Vezes', '2008-08-15', 6);
+('7 Vezes', '2008-08-15', 6)
+('Transcede', '2024-08-02', 7)
+('Rosas e Vinho Tinto', '2002-04-14', 8;
 
 INSERT INTO Musica(musica_titulo, musica_duracao, id_artista, id_disco) VALUES 
 	#Henrique e Juliano
@@ -263,7 +270,23 @@ Perfil 2011-10-05
 	('Ô De Casa (Ao Vivo)', '00:02:15', 7, 7),
 	('Vou Aonde Tiver (Ao Vivo)', '00:02:43', 7, 7),
 	('Na Horizontal (Ao Vivo)', '00:02:58', 7, 7),
-	('Bar De Bairro (Ao Vivo)', '00:02:52', 7, 7);
+	('Bar De Bairro (Ao Vivo)', '00:02:52', 7, 7)
+
+#Capital Inicial 2002-04-14
+('220 Volts', '00:02:42', 8, 8),
+	('À Sua Maneira', '00:05:01', 8, 8),
+	('Como Devia Estar', '00:03:44', 8, 8),
+	('Inocente', '00:04:06', 8, 8),
+	('Enquanto Eu Falo', '00:03:34', 8, 8),
+	('Algum Dia', '00:03:19', 8, 8),
+	('Quatro Vezes Você', '00:04:30', 8, 8),
+	('Pra Ninguém', '00:03:37', 8, 8),
+	('Olhos Vermelhos', '00:03:35', 8, 8),
+	('Mais', '00:03:03', 8, 8),
+	('Incondicionalmente', '00:03:53', 8, 8),
+	('Falar de Amor Não é Amar', '00:02:57', 8, 8),
+	('Rosas e Vinho Tinto', '00:02:51', 8, 8),
+	('Isabel', '00:03:04', 8, 8);
     
     INSERT INTO Usuario(usuario_nome, usuario_email, usuario_dataregistro) VALUES
     ('Alice Pires', 'alice.pires@gmail.com',  '2016-01-10'),
