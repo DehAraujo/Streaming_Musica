@@ -3,7 +3,7 @@ Fases:
 - Levantamento de requisitos
 - Identificação de Entidades, Atributos e Relacionamentos
 - Modelo E-R
-![Diagrama](Diagrama.jpg)
+!([Diagrama.jpg](https://github.com/DehAraujo/Streaming_Musica/blob/main/Diagrama.jpg?raw=true))
 - Diagrama E-R
 - Dicionário de dados
 - Normalização
