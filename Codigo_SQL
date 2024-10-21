@@ -302,26 +302,26 @@ INSERT INTO Musica(musica_titulo, musica_duracao, id_artista, id_disco) VALUES
 	('R.A.M. (remix ADF)', '00:04:51', 6, 13);
     
     INSERT INTO Usuario(usuario_nome, usuario_email, usuario_dataregistro) VALUES
-	    ('Alice Pires', 'alice.pires@gmail.com',  '2016-01-10'),
-	    ('Bruno Silva', 'bruno.silva@hotmail.com', '2017-03-22'),
-	    ('Carlos Souza', 'carlos.souza@yahoo.com', '2018-07-14'),
-	    ('Daniela Costa', 'daniela.costa@outlook.com', '2019-01-30'),
-	    ('Eduardo Lima', 'eduardo.lima@gmail.com', '2020-05-21'),
-	    ('Fernanda Gomes', 'fernanda.gomes@hotmail.com', '2016-11-12'),
-	    ('Gabriel Almeida', 'gabriel.almeida@yahoo.com', '2017-02-28'),
-	    ('Helena Santos', 'helena.santos@outlook.com', '2018-09-05'),
-	    ('Igor Ferreira', 'igor.ferreira@gmail.com', '2019-06-17'),
-	    ('Julia Oliveira', 'julia.oliveira@hotmail.com', '2020-08-22'),
-	    ('Kleber Martins', 'kleber.martins@yahoo.com', '2016-12-09'),
-	    ('Larissa Rodrigues', 'larissa.rodrigues@outlook.com', '2017-04-11'),
-	    ('Marcos Dias', 'marcos.dias@gmail.com', '2018-01-20'),
-	    ('Natalia Barbosa', 'natalia.barbosa@hotmail.com', '2019-03-13'),
-	    ('Otavio Pereira', 'otavio.pereira@yahoo.com', '2020-10-15'),
-	    ('Patricia Melo', 'patricia.melo@outlook.com', '2016-02-26'),
-	    ('Ricardo Carvalho', 'ricardo.carvalho@gmail.com', '2017-05-08'),
-	    ('Sabrina Rocha', 'sabrina.rocha@hotmail.com', '2018-06-29'),
-	    ('Thiago Fernandes', 'thiago.fernandes@yahoo.com', '2019-07-18'),
-	    ('Vanessa Araujo', 'vanessa.araujo@outlook.com', '2020-11-01');
+	('Alice Pires', 'alice.pires@gmail.com',  '2016-01-10'),
+	('Bruno Silva', 'bruno.silva@hotmail.com', '2017-03-22'),
+	('Carlos Souza', 'carlos.souza@yahoo.com', '2018-07-14'),
+	('Daniela Costa', 'daniela.costa@outlook.com', '2019-01-30'),
+	('Eduardo Lima', 'eduardo.lima@gmail.com', '2020-05-21'),
+	('Fernanda Gomes', 'fernanda.gomes@hotmail.com', '2016-11-12'),
+	('Gabriel Almeida', 'gabriel.almeida@yahoo.com', '2017-02-28'),
+	('Helena Santos', 'helena.santos@outlook.com', '2018-09-05'),
+	('Igor Ferreira', 'igor.ferreira@gmail.com', '2019-06-17'),
+	('Julia Oliveira', 'julia.oliveira@hotmail.com', '2020-08-22'),
+	('Kleber Martins', 'kleber.martins@yahoo.com', '2016-12-09'),
+	('Larissa Rodrigues', 'larissa.rodrigues@outlook.com', '2017-04-11'),
+	('Marcos Dias', 'marcos.dias@gmail.com', '2018-01-20'),
+	('Natalia Barbosa', 'natalia.barbosa@hotmail.com', '2019-03-13'),
+	('Otavio Pereira', 'otavio.pereira@yahoo.com', '2020-10-15'),
+	('Patricia Melo', 'patricia.melo@outlook.com', '2016-02-26'),
+	('Ricardo Carvalho', 'ricardo.carvalho@gmail.com', '2017-05-08'),
+	('Sabrina Rocha', 'sabrina.rocha@hotmail.com', '2018-06-29'),
+	('Thiago Fernandes', 'thiago.fernandes@yahoo.com', '2019-07-18'),
+	('Vanessa Araujo', 'vanessa.araujo@outlook.com', '2020-11-01');
 	    
     INSERT INTO Playlist(playlist_titulo, id_usuario) VALUES
 	('Favoritas', 1),
@@ -336,102 +336,102 @@ INSERT INTO Musica(musica_titulo, musica_duracao, id_artista, id_disco) VALUES
 	('Rock Alternativo', 9);
     
 INSERT INTO Musica_Playlist(id_usuario, id_musica, id_playlist) VALUES 
-#Usuario 1
-(1,1,1),
-(1,5,1),
-(1,8,1),
-1,9,1),
-(1,10,1),
-(1,154,1),
-(1,165,1),
-(1, 153, 1),
-(1, 151, 1),
-(1, 124, 1),
-(1, 126, 1),
-(1, 133, 1),
-(1, 137, 1),
-(1, 128, 1),
-(1, 82, 1),
-(1, 91, 1),
-(1, 83, 1),
+	#Usuario 1
+	(1,1,1),
+	(1,5,1),
+	(1,8,1),
+	1,9,1),
+	(1,10,1),
+	(1,154,1),
+	(1,165,1),
+	(1, 153, 1),
+	(1, 151, 1),
+	(1, 124, 1),
+	(1, 126, 1),
+	(1, 133, 1),
+	(1, 137, 1),
+	(1, 128, 1),
+	(1, 82, 1),
+	(1, 91, 1),
+	(1, 83, 1),
     
-#Usuario2
-(2, 11, 2),
-(2, 12, 2),
-(2, 81, 2),
-(2, 1, 2),
-(2, 15, 2),
-(2, 16, 2),
-(2, 21, 2),
-(2, 18, 2),
-(2, 19, 2),
+	#Usuario2
+	(2, 11, 2),
+	(2, 12, 2),
+	(2, 81, 2),
+	(2, 1, 2),
+	(2, 15, 2),
+	(2, 16, 2),
+	(2, 21, 2),
+	(2, 18, 2),
+	(2, 19, 2),
+	    
+	#Usuario3
+	(3, 21, 3),
+	(3, 22, 3),
+	(3, 23, 3),
+	(3, 54, 3),
+	(3, 55, 3),
+	(3, 59, 3),
+	(3, 72, 3),
+	(3, 78, 3),
+	(3, 80, 3),
+	(3, 81, 3),
     
-#Usuario3
-(3, 21, 3),
-(3, 22, 3),
-(3, 23, 3),
-(3, 54, 3),
-(3, 55, 3),
-(3, 59, 3),
-(3, 72, 3),
-(3, 78, 3),
-(3, 80, 3),
-(3, 81, 3),
+	#Usuario4
+	(4, 80, 4),
+	(4, 32, 4),
+	(4, 33, 4),
+	(4, 34, 4),
+	(4, 35, 4),
+	(4, 36, 4),
+	(4, 37, 4),
+	(4, 38, 4),
+	(4, 39, 4),
+	(4, 40, 4),
     
-#Usuario4
-(4, 80, 4),
-(4, 32, 4),
-(4, 33, 4),
-(4, 34, 4),
-(4, 35, 4),
-(4, 36, 4),
-(4, 37, 4),
-(4, 38, 4),
-(4, 39, 4),
-(4, 40, 4),
-    
-#Usuario5
-    (5, 1, 5),
-    (5, 2, 5),
-    (5, 3, 5),
-    (5, 4, 5),
-    (5, 5, 5),
-    (5, 6, 5),
-    (5, 7, 5),
-    (5, 8, 5),
-    (5, 9, 5),
-
+	#Usuario5
+	(5, 1, 5),
+	(5, 2, 5),
+	(5, 3, 5),
+	(5, 4, 5),
+	(5, 5, 5),
+	(5, 6, 5),
+	(5, 7, 5),
+	(5, 8, 5),
+	(5, 9, 5),
+	
 	#Usuario6
-    (6, 64, 6),
-    (6, 68, 6),
-    (6, 71, 6),
-    (6, 73, 6),
-    (6, 75, 6),
-    (6, 76, 6),
-    (6, 77, 6),
-    (6, 78, 6),
-    (6, 83, 6),
-    (6, 85, 6),
-
+	(6, 64, 6),
+	(6, 68, 6),
+	(6, 71, 6),
+	(6, 73, 6),
+	(6, 75, 6),
+	(6, 76, 6),
+	(6, 77, 6),
+	(6, 78, 6),
+	(6, 83, 6),
+	(6, 85, 6),
+	
 	#Usuario7
 	(7,122,7),
 	(7,124,7),
 	(7,127,7),
-
+	
 	#Usuario8
 	(8,154,8),
 	(8,165,8),
-    
-    #Usuario9
-    (9,121,9),
-    (9,122,9),
-    (9,123,9),
-    (9,124,9),
-    (9,153,9),
-    (9,154,9),
-    (9,155,9),
-    (9,76,9),
-    (9,73,9);
+	    
+	#Usuario9
+	(9,121,9),
+	(9,122,9),
+	(9,123,9),
+	(9,124,9),
+	(9,153,9),
+	(9,154,9),
+	(9,155,9),
+	(9,76,9),
+	(9,73,9);
     
  # 1. Liste o título de todas as músicas e suas durações.   
 	SELECT 
@@ -465,248 +465,245 @@ INSERT INTO Musica_Playlist(id_usuario, id_musica, id_playlist) VALUES
 		disco_data > '2020-12-31';
 		
 # 4. Liste os títulos das músicas e os nomes dos artistas que as interpretam, ordenados pelo título da música.
-SELECT DISTINCT
-	m.musica_titulo,
-    a.artista_nome
-FROM 
-	Musica m
-JOIN Artista a ON m.id_artista = a.id_artista
-ORDER BY musica_titulo;
+	SELECT DISTINCT
+		m.musica_titulo,
+	    a.artista_nome
+	FROM 
+		Musica m
+	JOIN Artista a ON m.id_artista = a.id_artista
+	ORDER BY musica_titulo;
 
 # 5. Encontre os títulos das playlists que contêm a música com o título 'Arranhao'.
-SELECT 
-	p.playlist_titulo
-FROM 
-	Playlist p
-JOIN 
-	Musica_Playlist mp ON p.id_playlist = mp.id_playlist 
-JOIN
-	Musica m ON  m.id_musica = mp.id_musica
-WHERE
-	m.musica_titulo = 'Arranhao';
+	SELECT 
+		p.playlist_titulo
+	FROM 
+		Playlist p
+	JOIN 
+		Musica_Playlist mp ON p.id_playlist = mp.id_playlist 
+	JOIN
+		Musica m ON  m.id_musica = mp.id_musica
+	WHERE
+		m.musica_titulo = 'Arranhao';
 
 # 6. Liste os usuários que criaram playlists que contêm músicas do disco 'Buteco do Gustavo'.
-SELECT u.usuario_nome, m.musica_titulo, d.disco_titulo
-FROM 
-	Musica_playlist mp
-JOIN 
-	Usuario u ON mp.id_usuario = u.id_usuario
-JOIN 	
-	Playlist p ON mp.id_playlist = p.id_playlist
-JOIN
-	Musica m ON mp.id_musica = m.id_musica
-JOIN	
-	Disco d ON m.id_disco = d.id_disco 
-WHERE
-	d.disco_titulo = 'Buteco do Gustavo';
+	SELECT u.usuario_nome, m.musica_titulo, d.disco_titulo
+	FROM 
+		Musica_playlist mp
+	JOIN 
+		Usuario u ON mp.id_usuario = u.id_usuario
+	JOIN 	
+		Playlist p ON mp.id_playlist = p.id_playlist
+	JOIN
+		Musica m ON mp.id_musica = m.id_musica
+	JOIN	
+		Disco d ON m.id_disco = d.id_disco 
+	WHERE
+		d.disco_titulo = 'Buteco do Gustavo';
 
 # 7. Qual é a duração média das músicas de um artista específico?
-SELECT 
-	a.artista_nome,
-AVG(m.musica_duracao) AS DuracaoMedia
-FROM 
-	Musica m
-JOIN 
-	Artista a ON m.id_artista = a.id_artista
-GROUP BY 
-	a.artista_nome
-HAVING 
-	a.artista_nome = 'Henrique e Juliano';
+	SELECT 
+		a.artista_nome,
+	AVG(m.musica_duracao) AS DuracaoMedia
+	FROM 
+		Musica m
+	JOIN 
+		Artista a ON m.id_artista = a.id_artista
+	GROUP BY 
+		a.artista_nome
+	HAVING 
+		a.artista_nome = 'Henrique e Juliano';
 
 # 8.Encontre todos os artistas que não têm músicas.
-SELECT 
-	a.artista_nome
-FROM 
-	Artista a
-LEFT JOIN 
-	Musica m ON a.id_artista = m.id_artista
-WHERE 
-	m.id_artista IS NULL;
-    
+	SELECT 
+		a.artista_nome
+	FROM 
+		Artista a
+	LEFT JOIN 
+		Musica m ON a.id_artista = m.id_artista
+	WHERE 
+		m.id_artista IS NULL;
+	    
 # 9. Liste todos os discos que contêm mais de 10 músicas.
-SELECT
-	d.disco_titulo,
-	COUNT(m.id_musica) AS Numero_Musicas
-FROM
-	Disco d
-JOIN
-	Musica m ON d.id_disco = m.id_disco
-GROUP BY
-	d.disco_titulo
-HAVING 
-	COUNT(m.id_musica) > 10;
+	SELECT
+		d.disco_titulo,
+		COUNT(m.id_musica) AS Numero_Musicas
+	FROM
+		Disco d
+	JOIN
+		Musica m ON d.id_disco = m.id_disco
+	GROUP BY
+		d.disco_titulo
+	HAVING 
+		COUNT(m.id_musica) > 10;
 
 # 10. Quais são os nomes dos artistas que têm discos lançados antes de 2010 e que têm músicas na playlist 'Favoritas'?
-SELECT DISTINCT 
-	a.artista_nome, d.disco_data, p.playlist_titulo
-FROM 
-	Artista a
-JOIN 	
-	Disco d ON a.id_artista = d.id_artista
-JOIN
-	Musica m ON a.id_artista = m.id_artista
-JOIN
-	Musica_playlist mp ON mp.id_musica = m.id_musica
-JOIN
-	Playlist p ON mp.id_playlist = p.id_playlist
-WHERE
-	d.disco_data < '2010-01-01' AND p.playlist_titulo = 'Favoritas';
+	SELECT DISTINCT 
+		a.artista_nome, d.disco_data, p.playlist_titulo
+	FROM 
+		Artista a
+	JOIN 	
+		Disco d ON a.id_artista = d.id_artista
+	JOIN
+		Musica m ON a.id_artista = m.id_artista
+	JOIN
+		Musica_playlist mp ON mp.id_musica = m.id_musica
+	JOIN
+		Playlist p ON mp.id_playlist = p.id_playlist
+	WHERE
+		d.disco_data < '2010-01-01' AND p.playlist_titulo = 'Favoritas';
 
 # 11. Quais músicas são interpretadas por mais de um artista?
-SELECT
-	m.musica_titulo
-FROM
-	Musica m
-JOIN
-	Artista a ON m.id_artista = a.id_artista
-GROUP BY
-	m.musica_titulo
-HAVING 
-	COUNT(DISTINCT a.id_artista) > 1;
-
+	SELECT
+		m.musica_titulo
+	FROM
+		Musica m
+	JOIN
+		Artista a ON m.id_artista = a.id_artista
+	GROUP BY
+		m.musica_titulo
+	HAVING 
+		COUNT(DISTINCT a.id_artista) > 1;
 
 # 12. Liste os títulos das músicas que aparecem em mais de uma playlist.
-SELECT 
-	m.musica_titulo, m.id_musica
-FROM
-	Musica m
-JOIN
-	Musica_Playlist mp ON m.id_musica = mp.id_musica
-GROUP BY
-	m.musica_titulo, m.id_musica
-HAVING 
-	COUNT(mp.id_playlist) > 1;
+	SELECT 
+		m.musica_titulo, m.id_musica
+	FROM
+		Musica m
+	JOIN
+		Musica_Playlist mp ON m.id_musica = mp.id_musica
+	GROUP BY
+		m.musica_titulo, m.id_musica
+	HAVING 
+		COUNT(mp.id_playlist) > 1;
     
 # 13. Encontre os nomes dos usuários que têm playlists que incluem a música 'A Sua Maneira'.
-SELECT 
-	u.usuario_nome, p.playlist_titulo, m.musica_titulo
-FROM 
-	Usuario u
-JOIN 
-	Playlist p ON u.id_usuario = p.id_usuario
-JOIN
-	Musica_playlist mp ON mp.id_playlist = p.id_playlist
-JOIN 
-	Musica m ON mp.id_musica = m.id_musica
-WHERE 
-	m.musica_titulo = 'A Sua Maneira';
+	SELECT 
+		u.usuario_nome, p.playlist_titulo, m.musica_titulo
+	FROM 
+		Usuario u
+	JOIN 
+		Playlist p ON u.id_usuario = p.id_usuario
+	JOIN
+		Musica_playlist mp ON mp.id_playlist = p.id_playlist
+	JOIN 
+		Musica m ON mp.id_musica = m.id_musica
+	WHERE 
+		m.musica_titulo = 'A Sua Maneira';
 
 # 14. Qual é o título da música mais longa do disco 'Manifesto Musical'?
-SELECT 
-	m.musica_titulo, m.musica_duracao
-FROM
-	Musica m
-JOIN
-	Disco d ON m.id_disco = d.id_disco
-WHERE
-	d.disco_titulo = 'Manifesto Musical'
-ORDER BY
-	m.musica_duracao DESC
-LIMIT 1;
+	SELECT 
+		m.musica_titulo, m.musica_duracao
+	FROM
+		Musica m
+	JOIN
+		Disco d ON m.id_disco = d.id_disco
+	WHERE
+		d.disco_titulo = 'Manifesto Musical'
+	ORDER BY
+		m.musica_duracao DESC
+	LIMIT 1;
 
 # 15. Liste todos os discos lançados por um artista específico em um determinado ano.
-SELECT 
-	d.*
-FROM
-	Disco d
-JOIN
-	Artista a ON d.id_artista = a.id_artista
-WHERE
-	a.artista_nome = 'Marcelo Falcao'
-AND YEAR
-	(d.disco_data) = 2001;
-    
-    select * from Disco;
-
+	SELECT 
+		d.*
+	FROM
+		Disco d
+	JOIN
+		Artista a ON d.id_artista = a.id_artista
+	WHERE
+		a.artista_nome = 'Marcelo Falcao'
+	AND YEAR
+		(d.disco_data) = 2001;
+	    
 # 16. Quais são os nomes dos artistas que têm músicas em playlists criadas por um usuário específico?
-SELECT DISTINCT a.artista_nome, m.musica_titulo
-FROM 
-	Musica_Playlist mp
-JOIN 
-	Musica m ON mp.id_musica = m.id_musica
-JOIN
-	Playlist p ON mp.id_playlist = p.id_playlist
-JOIN
-	Usuario u ON mp.id_usuario = u.id_usuario
-JOIN
-	Artista a ON m.id_artista = a.id_artista
-WHERE
-	u.usuario_nome = 'Alice Pires';
+	SELECT DISTINCT a.artista_nome, m.musica_titulo
+	FROM 
+		Musica_Playlist mp
+	JOIN 
+		Musica m ON mp.id_musica = m.id_musica
+	JOIN
+		Playlist p ON mp.id_playlist = p.id_playlist
+	JOIN
+		Usuario u ON mp.id_usuario = u.id_usuario
+	JOIN
+		Artista a ON m.id_artista = a.id_artista
+	WHERE
+		u.usuario_nome = 'Alice Pires';
 
 # 17. Encontre a lista de músicas que não estão em nenhuma playlist.
-SELECT 
-	m.musica_titulo
-FROM 
-	Musica m
-WHERE m.id_musica NOT IN (
-    SELECT 
-		mp.id_musica
-    FROM
-		Musica_Playlist mp
-);
+	SELECT 
+		m.musica_titulo
+	FROM 
+		Musica m
+	WHERE m.id_musica NOT IN (
+	    SELECT 
+			mp.id_musica
+	    FROM
+			Musica_Playlist mp
+	);
 
 # 18. Liste os títulos das músicas e os nomes dos artistas que têm mais de 3 músicas em uma mesma playlist.
-SELECT 
-	p.playlist_titulo,
-	m.musica_titulo,
-    a.artista_nome    
-FROM 
-    Musica_Playlist mp
-JOIN 
-    Musica m ON mp.id_musica = m.id_musica
-JOIN 
-    Artista a ON m.id_artista = a.id_artista
-JOIN 
-    Playlist p ON mp.id_playlist = p.id_playlist
-WHERE 
-    (a.artista_nome, p.id_playlist) IN (
-        SELECT 
-            a2.artista_nome,
-            p2.id_playlist
-        FROM 
-            Musica_Playlist mp2
-        JOIN 
-            Musica m2 ON mp2.id_musica = m2.id_musica
-        JOIN 
-            Artista a2 ON m2.id_artista = a2.id_artista
-        JOIN 
-            Playlist p2 ON mp2.id_playlist = p2.id_playlist
-        GROUP BY 
-            a2.artista_nome, p2.id_playlist
-        HAVING 
-            COUNT(m2.id_musica) > 3
-    )
-ORDER BY 
-    p.playlist_titulo, m.musica_titulo, a.artista_nome; 
+	SELECT 
+		p.playlist_titulo,
+		m.musica_titulo,
+	    a.artista_nome    
+	FROM 
+	    Musica_Playlist mp
+	JOIN 
+	    Musica m ON mp.id_musica = m.id_musica
+	JOIN 
+	    Artista a ON m.id_artista = a.id_artista
+	JOIN 
+	    Playlist p ON mp.id_playlist = p.id_playlist
+	WHERE 
+	    (a.artista_nome, p.id_playlist) IN (
+	        SELECT 
+	            a2.artista_nome,
+	            p2.id_playlist
+	        FROM 
+	            Musica_Playlist mp2
+	        JOIN 
+	            Musica m2 ON mp2.id_musica = m2.id_musica
+	        JOIN 
+	            Artista a2 ON m2.id_artista = a2.id_artista
+	        JOIN 
+	            Playlist p2 ON mp2.id_playlist = p2.id_playlist
+	        GROUP BY 
+	            a2.artista_nome, p2.id_playlist
+	        HAVING 
+	            COUNT(m2.id_musica) > 3
+	    )
+	ORDER BY 
+	    p.playlist_titulo, m.musica_titulo, a.artista_nome; 
 
 # 19. Quais são os discos que contêm músicas de artistas que têm pelo menos 2 discos lançados?
-SELECT DISTINCT d.disco_titulo, a.artista_nome
-FROM Disco d
-JOIN Musica m ON d.id_disco = m.id_disco
-JOIN Artista a ON d.id_artista = a.id_artista
-WHERE a.id_artista IN (
-    SELECT id_artista
-    FROM Disco
-    GROUP BY id_artista
-    HAVING COUNT(id_disco) >= 2
-);
+	SELECT DISTINCT d.disco_titulo, a.artista_nome
+	FROM Disco d
+	JOIN Musica m ON d.id_disco = m.id_disco
+	JOIN Artista a ON d.id_artista = a.id_artista
+	WHERE a.id_artista IN (
+	    SELECT id_artista
+	    FROM Disco
+	    GROUP BY id_artista
+	    HAVING COUNT(id_disco) >= 2
+	);
 
 # 20. Liste todos os usuários e suas playlists, mas apenas para playlists que contêm pelo menos 5 músicas?
-SELECT 
-    u.usuario_nome, 
-    p.playlist_titulo,
-    COUNT(mp.id_musica) AS Numero_musicas
-FROM 
-    Usuario u
-JOIN 
-    Playlist p ON u.id_usuario = p.id_usuario
-JOIN 
-    Musica_Playlist mp ON p.id_playlist = mp.id_playlist
-GROUP BY 
-    u.usuario_nome, p.playlist_titulo
-HAVING 
-    COUNT(mp.id_musica) >= 5
-ORDER BY 
-    u.usuario_nome, p.playlist_titulo;
-    
+	SELECT 
+	    u.usuario_nome, 
+	    p.playlist_titulo,
+	    COUNT(mp.id_musica) AS Numero_musicas
+	FROM 
+	    Usuario u
+	JOIN 
+	    Playlist p ON u.id_usuario = p.id_usuario
+	JOIN 
+	    Musica_Playlist mp ON p.id_playlist = mp.id_playlist
+	GROUP BY 
+	    u.usuario_nome, p.playlist_titulo
+	HAVING 
+	    COUNT(mp.id_musica) >= 5
+	ORDER BY 
+	    u.usuario_nome, p.playlist_titulo;
+	    
       
