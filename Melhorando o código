@@ -1,5 +1,5 @@
-CREATE DATABASE adriana1;
-USE adriana1;
+CREATE DATABASE pro;
+USE pro;
 
 CREATE TABLE Artista(
 	id_artista INT unsigned not null auto_increment,
@@ -44,10 +44,6 @@ CREATE TABLE Playlist(
     FOREIGN KEY(id_usuario) REFERENCES Usuario(id_usuario)
 );
 
-
-
-
-
 CREATE TABLE Musica_playlist(
 	id_musicaplaylist INT unsigned not null auto_increment,
     id_musica INT unsigned,
@@ -59,42 +55,37 @@ CREATE TABLE Musica_playlist(
     FOREIGN KEY(id_usuario) REFERENCES Usuario(id_usuario)
 );
 
-ALTER TABLE Musica_Playlist
-ADD id_playlist INT unsigned;
-select * from Musica_Playlist;
-ALTER TABLE Musica_Playlist
-ADD id_disco INT unsigned;
-select * from Musica_Playlist;
-ALTER TABLE Musica_playlist
-
-    
-    
     SELECT * from Musica;
     select * from Playlist;
     
 INSERT INTO Artista (artista_nome, artista_data) VALUES 
 	('Henrique e Juliano', '1989-11-23'),
     ('Gustavo Lima', '1989-09-03'),
-    ('João Neto', '1979-08-12')
-('Marilha Mendonca', '1995-07-22')
-('Renato Russo', '1960-03-27')
-('Marcelo Falcao', 1973-05-31')
-('Luana Prado','1989-05-25')
-('Dinho Ouro Preto', '1964-04-27');
+    ('João Neto', '1979-08-12'),
+	('Marilha Mendonca', '1995-07-22'),
+	('Renato Russo', '1960-03-27'),
+	('Marcelo Falcao', '1973-05-31'),
+	('Luana Prado','1989-05-25'),
+	('Dinho Ouro Preto', '1964-04-27'),
+    ('Ana Castela', '2003-11-16'),
+    ('Mari Fernandez','2001-02-19'),
+    ('Simone Mendes', '1984-05-24'),
+    ('Luan Santana', '1991-03-13');
 
 INSERT INTO Disco (disco_titulo, disco_data, id_artista) VALUES 
 	('Manifesto Musical', '2022-05-20', 1),
     ('Buteco do Gustavo', '2015-07-24', 2),
     ('Ao Vivo em Vitória', '2014-04-21', 3),
-('Marilha Mendonca ao Vivo', '2015-10-03', 4),
-('Mais do Mesmo', '1998-03-03', 5),
-('Perfil',  '2011-10-05', 5),
-('O Rappa', '1994-10-19', 6),
-('Acustico MTV', '2005-07-14', 6),
-('Lado B Lado A', '1999-09-15', 6),
-('7 Vezes', '2008-08-15', 6)
-('Transcede', '2024-08-02', 7)
-('Rosas e Vinho Tinto', '2002-04-14', 8;
+	('Marilha Mendonca ao Vivo', '2015-10-03', 4),
+	('Mais do Mesmo', '1998-03-03', 5),
+	('Perfil',  '2011-10-05', 5),
+	('O Rappa', '2001-10-19', 6),
+	('Acustico MTV', '2005-07-14', 6),
+	('Lado B Lado A', '1999-09-15', 6),
+	('7 Vezes', '2008-08-15', 6),
+	('Transcede', '2024-08-02', 7),
+	('Rosas e Vinho Tinto', '2002-04-14', 8),
+    ('Instinto Coletivo Ao Vivo', '2001-10-15', 6);
 
 INSERT INTO Musica(musica_titulo, musica_duracao, id_artista, id_disco) VALUES 
 	#Henrique e Juliano
@@ -141,7 +132,7 @@ INSERT INTO Musica(musica_titulo, musica_duracao, id_artista, id_disco) VALUES
     ('Minha Fantasia', '00:03:25', 3, 3),
     ('Presto Pouco (Part. Gregory & Rafael)', '00:03:00', 3, 3),
     ('Engarrafamento', '00:03:10', 3, 3),
-    ('Bebeu Fudeu', '00:02:50', 3, 3)
+    ('Bebeu Fudeu', '00:02:50', 3, 3),
 
 	#Marilha Mendonça Ao Vivo 2015-10-03
 	('Infiel', '00:03:21', 4, 4),
@@ -160,7 +151,7 @@ INSERT INTO Musica(musica_titulo, musica_duracao, id_artista, id_disco) VALUES
 	('Impasse', '00:03:00', 4, 4),
 	('4 e 15', '00:03:00', 4, 4),
 	('Essas Nossas Brigas', '00:02:59', 4, 4),
-	('Entre Quatro Paredes', '00:03:07', 4, 4)
+	('Entre Quatro Paredes', '00:03:07', 4, 4),
 	
 	#Legião Urbana - Mais do Mesmo 1998-03-03
 	('Será', '00:02:29', 5, 5),
@@ -171,122 +162,144 @@ INSERT INTO Musica(musica_titulo, musica_duracao, id_artista, id_disco) VALUES
 	('Índios', '00:04:18', 5, 5),
 	('Que País É Este', '00:02:57', 5, 5),
 	('Faroeste Caboclo', '00:09:07', 5, 5),
-	('Há Tempos', NULL, 5, 5), -- Duração não fornecida
-	('Pais e Filhos', NULL, 5, 5), -- Duração não fornecida
+	('Há Tempos', '00:03:02', 5, 5), 
+	('Pais e Filhos', '00:02:51', 5, 5),
 	('Meninos e Meninas', '00:03:24', 5, 5),
 	('Vento no Litoral', '00:06:06', 5, 5),
 	('Perfeição', '00:04:36', 5, 5),
 	('Giz', '00:03:22', 5, 5),
-	('Dezesseis', '00:05:22', 5, 5),
-	('Antes das Seis', '00:03:09', 5, 5)
+	('Dezesseis', '00:04:02', 5, 5),
+	('Antes das Seis', '00:03:09', 5, 5),
 
-Perfil 2011-10-05
-('Tempo Perdido', '00:05:02', 5, 5),
-	('Será', '00:02:29', 5, 5),
-	('Quase Sem Querer', '00:04:42', 5, 5),
-	('Índios', '00:04:18', 5, 5),
-	('Há Tempos', NULL, 5, 5), -- Duração não fornecida
-	('Perfeição', '00:04:36', 5, 5),
-	('Metal Contra as Nuvens', '00:11:30', 5, 5),
-	('Pais e Filhos', NULL, 5, 5), -- Duração não fornecida
-	('O Teatro dos Vampiros', '00:03:38', 5, 5),
-	('Giz', '00:03:22', 5, 5),
-	('Vento no Litoral', '00:06:06', 5, 5),
-	('Faroeste Caboclo', '00:09:07', 5, 5),
-	('Que País É Este', '00:02:57', 5, 5),
-	('Eduardo e Mônica', '00:04:32', 5, 5);
-#O Rappa 1994-10-19
-	('Catequeses do Medo', '00:03:55', 6, 6),
-	('Não Vão Me Matar', '00:05:17', 6, 6),
-	('Todo Camburão Tem Um Pouco de Navio Negreiro', '00:04:36', 6, 6),
-	('Take It Easy My Brother Charles', '00:04:05', 6, 6),
-	('Brixton, Bronx ou Baixada', '00:04:47', 6, 6),
-	('R.A.M.', '00:04:16', 6, 6),
-	('Skunk Jammin\'', '00:00:34', 6, 6),
-	('Coincidências e Paixões', '00:04:38', 6, 6),
-	('Fogo Cruzado', '00:04:36', 6, 6),
-	('A Noite', '00:03:13', 6, 6),
-	('Candidato Caô Caô', '00:04:51', 6, 6),
-	('Mitologia Gerimum', '00:04:16', 6, 6),
-	('Sujo', '00:04:13', 6, 6),
-	('Sujo (Dub)', '00:04:16', 6, 6),
-	('Todo Camburão Tem Um Pouco de Navio Negreiro (Dub)', '00:04:30', 6, 6),
-	('Vinheta da Silva', '00:00:25', 6, 6)
+	#Perfil 2011-10-05
+	('Tempo Perdido', '00:05:02', 5, 6),
+	('Será', '00:02:29', 5, 6),
+	('Quase Sem Querer', '00:04:42', 5, 6),
+	('Índios', '00:04:18', 5, 6),
+	('Perfeição', '00:04:36', 5, 6),
+	('Metal Contra as Nuvens', '00:11:30', 5, 6),
+	('O Teatro dos Vampiros', '00:03:38', 5, 6),
+	('Giz', '00:03:22', 5, 6),
+	('Vento no Litoral', '00:06:06', 5, 6),
+	('Faroeste Caboclo', '00:09:07', 5, 6),
+	('Que País É Este', '00:02:57', 5, 6),
+	('Eduardo e Mônica', '00:04:32', 5, 6),
+    
+	#O Rappa 1994-10-19
+	('Catequeses do Medo', '00:03:55', 6, 7),
+	('Não Vão Me Matar', '00:05:17', 6, 7),
+	('Todo Camburão Tem Um Pouco de Navio Negreiro', '00:04:36', 6, 7),
+	('Take It Easy My Brother Charles', '00:04:05', 6, 7),
+	('Brixton, Bronx ou Baixada', '00:04:47', 6, 7),
+	('R.A.M.', '00:04:16', 6, 7),
+	('Skunk Jammin\'', '00:00:34', 6, 7),
+	('Coincidências e Paixões', '00:04:38', 6, 7),
+	('Fogo Cruzado', '00:04:36', 6, 7),
+	('A Noite', '00:03:13', 6, 7),
+	('Candidato Caô Caô', '00:04:51', 6, 7),
+	('Mitologia Gerimum', '00:04:16', 6, 7),
+	('Sujo', '00:04:13', 6, 7),
+	('Sujo (Dub)', '00:04:16', 6, 7),
+	('Todo Camburão Tem Um Pouco de Navio Negreiro (Dub)', '00:04:30', 6, 7),
+	('Vinheta da Silva', '00:00:25', 6, 7),
 
-#Acustico MTV 2005-07-14
-	('Na Frente do Reto', NULL, 6, 6),
-	('Mar de Gente', NULL, 6, 6),
-	('Bitterusso Champagne', NULL, 6, 6),
-	('Brixton, Bronx ou Baixada', NULL, 6, 6),
-	('Homem Amarelo', NULL, 6, 6),
-	('Mitologia Gerimun', NULL, 6, 6),
-	('Lado B Lado A', NULL, 6, 6),
-	('O Novo Já Nasce Velho', NULL, 6, 6),
-	('Reza Vela', NULL, 6, 6),
-	('Se Não Avisar o Bicho Pega', NULL, 6, 6),
-	('O Que Sobrou do Céu', NULL, 6, 6),
-	('Rodo Cotidiano', NULL, 6, 6),
-	('Não Perca as Crianças de Vista', NULL, 6, 6),
-	('Pescador de Ilusões', NULL, 6, 6),
-	('O Salto', NULL, 6, 6),
-	('Cristo e Oxalá', NULL, 6, 6),
-	('Papo de Surdo e Mudo', NULL, 6, 6),
-	('Me Deixa', NULL, 6, 6),
-	('Eu Quero Ver Gol', NULL, 6, 6)
+	#Acustico MTV 2005-07-14
+	('Na Frente do Reto', '00:04:32', 6, 8),
+	('Mar de Gente', '00:03:58', 6, 8),
+	('Bitterusso Champagne', '00:04:45', 6, 8),
+	('Brixton, Bronx ou Baixada', '00:04:11', 6, 8),
+	('Homem Amarelo', '00:03:49', 6, 8),
+	('Mitologia Gerimun', '00:05:02', 6, 8),
+	('Lado B Lado A', '00:04:27', 6, 8),
+	('O Novo Já Nasce Velho', '00:03:54', 6, 8),
+	('Reza Vela', '00:04:21', 6, 8),
+	('Se Não Avisar o Bicho Pega', '00:04:35', 6, 8),
+	('O Que Sobrou do Céu', '00:04:10', 6, 8),
+	('Rodo Cotidiano', '00:03:52', 6, 8),
+	('Não Perca as Crianças de Vista', '00:04:00', 6, 8),
+	('Pescador de Ilusões', '00:04:48', 6, 8),
+	('O Salto', '00:03:36', 6, 8),
+	('Cristo e Oxalá', '00:04:29', 6, 8),
+	('Papo de Surdo e Mudo', '00:03:59', 6, 8),
+	('Me Deixa', '00:04:05', 6, 8),
+	('Eu Quero Ver Gol', '00:03:44', 6, 8),
+    
+	#Lado B Lado A 1999-09-15
+	('Tribunal de Rua', '00:04:12', 6, 9),
+    ('Me Deixa', '00:04:08', 6, 9),
+    ('Cristo e Oxalá', '00:04:27', 6, 9),
+    ('O Que Sobrou do Céu', '00:03:53', 6, 9),
+    ('Se Não Avisar o Bicho Pega', '00:05:16', 6, 9),
+    ('Minha Alma (A Paz que Eu Não Quero)', '00:05:04', 6, 9),
+    ('Lado B Lado A', '00:05:06', 6, 9),
+    ('Favela', '00:03:22', 6, 9),
+    ('Homem Amarelo', '00:04:17', 6, 9),
+    ('Nó de Fumaça', '00:03:45', 6, 9),
+    ('A Todas as Comunidades do Engenho Novo', '00:06:19', 6, 9),
+    ('Na Palma da Mão', '00:07:05', 6, 9),
 
-#Lado B Lado A 1999-09-15
-	('Tribunal de Rua', '00:04:12', 6, 6),
-	('Me Deixa', '00:04:08', 6, 6),
-	('Cristo e Oxalá', '00:04:27', 6, 6),
-	('O Que Sobrou do Céu', '00:03:53', 6, 6),
-	('Se Não Avisar o Bicho Pega', '00:05:16', 6, 6),
-	('Minha Alma (A Paz que Eu Não Quero)', '00:05:04', 6, 6),
-	('Lado B Lado A', '00:05:06', 6, 6),
-	('Favela', '00:03:22', 6, 6),
-	('Homem Amarelo', '00:04:17', 6, 6),
-	('Nó de Fumaça', '00:03:45', 6, 6),
-	('A Todas as Comunidades do Engenho Novo', '00:06:19', 6, 6),
-	('Na Palma da Mão', '00:07:05', 6, 6)
+	#7 Vezes 2008-08-15
+	('Meu Santo Tá Cansado', '00:05:08', 6, 10),
+    ('Verdade de Feirante', '00:04:46', 6, 10),
+    ('Hóstia', '00:03:23', 6, 10),
+    ('Meu Mundo é o Barro', '00:04:39', 6, 10),
+    ('Farpa Cortante', '00:04:16', 6, 10),
+    ('Em Busca do Porrão', '00:04:25', 6, 10),
+    ('Em Busca do Porrão (Versão 2)', '00:05:12', 6, 10),
+    ('Monstro Invisível', '00:04:41', 6, 10),
+    ('Maria', '00:05:17', 6, 10),
+    ('Súplica Cearense', '00:06:02', 6, 10),
+    ('Fininho da Vida', '00:04:50', 6, 10),
+    ('Documento', '00:04:00', 6, 10),
+    ('Respeito pela Mais Bela', '00:03:52', 6, 10),
+    ('Vários Holofotes', '00:03:55', 6, 10),
 
-#7 Vezes 2008-08-15
-	('Meu Santo Tá Cansado', '00:05:08', 6, 6),
-	('Verdade de Feirante', '00:04:46', 6, 6),
-	('Hóstia', '00:03:23', 6, 6),
-	('Meu Mundo é o Barro', '00:04:39', 6, 6),
-	('Farpa Cortante', '00:04:16', 6, 6),
-	('Em Busca do Porrão', '00:04:25', 6, 6),
-	('Em Busca do Porrão (Versão 2)', '00:05:12', 6, 6),
-	('Monstro Invisível', '00:04:41', 6, 6),
-	('Maria', '00:05:17', 6, 6),
-	('Súplica Cearense', '00:06:02', 6, 6),
-	('Fininho da Vida', '00:04:50', 6, 6),
-	('Documento', '00:04:00', 6, 6),
-	('Respeito pela Mais Bela', '00:03:52', 6, 6),
-	('Vários Holofotes', '00:03:55', 6, 6);
+	#Luana Prado Transcede 2024-08-02
+	('Depois (Ao Vivo)', '00:02:37', 7, 11),
+    ('Sombra Desconhecida (Ao Vivo)', '00:02:41', 7, 11),
+    ('Ô De Casa (Ao Vivo)', '00:02:15', 7, 11),
+    ('Vou Aonde Tiver (Ao Vivo)', '00:02:43', 7, 11),
+    ('Na Horizontal (Ao Vivo)', '00:02:58', 7, 11),
+    ('Bar De Bairro (Ao Vivo)', '00:02:52', 7, 11),
 
-#Luana Prado Transcede 2024-08-02
-('Depois (Ao Vivo)', '00:02:37', 7, 7),
-	('Sombra Desconhecida (Ao Vivo)', '00:02:41', 7, 7),
-	('Ô De Casa (Ao Vivo)', '00:02:15', 7, 7),
-	('Vou Aonde Tiver (Ao Vivo)', '00:02:43', 7, 7),
-	('Na Horizontal (Ao Vivo)', '00:02:58', 7, 7),
-	('Bar De Bairro (Ao Vivo)', '00:02:52', 7, 7)
+	#Capital Inicial 2002-04-14
+	('220 Volts', '00:02:42', 8, 12),
+    ('À Sua Maneira', '00:05:01', 8, 12),
+    ('Como Devia Estar', '00:03:44', 8, 12),
+    ('Inocente', '00:04:06', 8, 12),
+    ('Enquanto Eu Falo', '00:03:34', 8, 12),
+    ('Algum Dia', '00:03:19', 8, 12),
+    ('Quatro Vezes Você', '00:04:30', 8, 12),
+    ('Pra Ninguém', '00:03:37', 8, 12),
+    ('Olhos Vermelhos', '00:03:35', 8, 12),
+    ('Mais', '00:03:03', 8, 12),
+    ('Incondicionalmente', '00:03:53', 8, 12),
+    ('Falar de Amor Não é Amar', '00:02:57', 8, 12),
+    ('Rosas e Vinho Tinto', '00:02:51', 8, 12),
+    ('Isabel', '00:03:04', 8, 12),
 
-#Capital Inicial 2002-04-14
-('220 Volts', '00:02:42', 8, 8),
-	('À Sua Maneira', '00:05:01', 8, 8),
-	('Como Devia Estar', '00:03:44', 8, 8),
-	('Inocente', '00:04:06', 8, 8),
-	('Enquanto Eu Falo', '00:03:34', 8, 8),
-	('Algum Dia', '00:03:19', 8, 8),
-	('Quatro Vezes Você', '00:04:30', 8, 8),
-	('Pra Ninguém', '00:03:37', 8, 8),
-	('Olhos Vermelhos', '00:03:35', 8, 8),
-	('Mais', '00:03:03', 8, 8),
-	('Incondicionalmente', '00:03:53', 8, 8),
-	('Falar de Amor Não é Amar', '00:02:57', 8, 8),
-	('Rosas e Vinho Tinto', '00:02:51', 8, 8),
-	('Isabel', '00:03:04', 8, 8);
+#Instinto Coletivo Ao Vivo    2001-10-15
+('Intro', '00:01:28', 6, 13),
+('Tumulto', '00:03:42', 6, 13),
+('Se não avisar o bicho pega', '00:04:17', 6, 13),
+('Miséria S.A.', '00:03:04', 6, 13),
+('Todo camburão tem um pouco de navio negreiro', '00:11:34', 6, 13),
+('Homem amarelo', '00:04:40', 6, 13),
+('Minha alma (A paz que eu não quero)', '00:05:39', 6, 13),
+('Cristo e Oxalá', '00:05:15', 6, 13),
+('Hey Joe', '00:05:32', 6, 13),
+('Nó de fumaça', '00:03:48', 6, 13),
+('O homem bomba', '00:08:16', 6, 13),
+('Me deixa', '00:03:55', 6, 13),
+('Vapor barato', '00:07:05', 6, 13),
+('LadoB LadoA', '00:06:15', 6, 13),
+('A feira', '00:03:50', 6, 13),
+('Ilê Ayê', '00:04:16', 6, 13),
+('Ninguém regula a América', '00:04:18', 6, 13),
+('Milagre', '00:05:17', 6, 13),
+('Instinto coletivo', '00:05:06', 6, 13),
+('Fica doido varrido', '00:04:37', 6, 13),
+('R.A.M. (remix ADF)', '00:04:51', 6, 13);
     
     INSERT INTO Usuario(usuario_nome, usuario_email, usuario_dataregistro) VALUES
     ('Alice Pires', 'alice.pires@gmail.com',  '2016-01-10'),
@@ -319,7 +332,8 @@ Perfil 2011-10-05
     ('So nostalgia', 5),
     ('Legiao', 6),
     ('Good time', 7),
-    ('Marilha', 8);
+    ('Marilha', 8),
+    ('Rock Alternativo', 9);
     
     INSERT INTO Musica_Playlist(id_usuario, id_musica, id_playlist) VALUES 
 	#Usuario 1
@@ -328,27 +342,27 @@ Perfil 2011-10-05
     (1,8,1),
     (1,9,1),
     (1,10,1),
-    (1,28,1),
-    (1,10,1),
-    (1, 1, 1),
-    (1, 2, 1),
-    (1, 3, 1),
-    (1, 4, 1),
-    (1, 5, 1),
-    (1, 6, 1),
-    (1, 7, 1),
-    (1, 8, 1),
-    (1, 9, 1),
-    (1, 10, 1),
+    (1,154,1),
+    (1,165,1),
+    (1, 153, 1),
+    (1, 151, 1),
+    (1, 124, 1),
+    (1, 126, 1),
+    (1, 133, 1),
+    (1, 137, 1),
+    (1, 128, 1),
+    (1, 82, 1),
+    (1, 91, 1),
+    (1, 83, 1),
     
     #Usuario2
     (2, 11, 2),
     (2, 12, 2),
-    (2, 13, 2),
-    (2, 14, 2),
+    (2, 81, 2),
+    (2, 1, 2),
     (2, 15, 2),
     (2, 16, 2),
-    (2, 17, 2),
+    (2, 21, 2),
     (2, 18, 2),
     (2, 19, 2),
     
@@ -356,16 +370,16 @@ Perfil 2011-10-05
     (3, 21, 3),
     (3, 22, 3),
     (3, 23, 3),
-    (3, 24, 3),
-    (3, 25, 3),
-    (3, 26, 3),
-    (3, 27, 3),
-    (3, 28, 3),
-    (3, 29, 3),
-    (3, 30, 3),
+    (3, 54, 3),
+    (3, 55, 3),
+    (3, 59, 3),
+    (3, 72, 3),
+    (3, 78, 3),
+    (3, 80, 3),
+    (3, 81, 3),
     
     #Usuario4
-    (4, 31, 4),
+    (4, 80, 4),
     (4, 32, 4),
     (4, 33, 4),
     (4, 34, 4),
@@ -387,27 +401,37 @@ Perfil 2011-10-05
     (5, 8, 5),
     (5, 9, 5),
 
-#Usuario6
-    (6, 11, 6),
-    (6, 12, 6),
-    (6, 35, 6),
-    (6, 14, 6),
-    (6, 15, 6),
-    (6, 16, 6),
-    (6, 40, 6),
-    (6, 18, 6),
-    (6, 19, 6),
-    (6, 20, 6),
+	#Usuario6
+    (6, 64, 6),
+    (6, 68, 6),
+    (6, 71, 6),
+    (6, 73, 6),
+    (6, 75, 6),
+    (6, 76, 6),
+    (6, 77, 6),
+    (6, 78, 6),
+    (6, 83, 6),
+    (6, 85, 6),
 
-Usuario7
-(7,50,7),
-(7,80,7),
-(7,51,7),
+	#Usuario7
+	(7,122,7),
+	(7,124,7),
+	(7,127,7),
 
-Usuario8
-(8,81,8),
-(8,83,8);
+	#Usuario8
+	(8,154,8),
+	(8,165,8),
     
+    #Usuario9
+    (9,121,9),
+    (9,122,9),
+    (9,123,9),
+    (9,124,9),
+    (9,153,9),
+    (9,154,9),
+    (9,155,9),
+    (9,76,9),
+    (9,73,9);
     
  # 1. Liste o título de todas as músicas e suas durações.   
 	SELECT 
@@ -441,16 +465,14 @@ Usuario8
 		disco_data > '2020-12-31';
 		
 # 4. Liste os títulos das músicas e os nomes dos artistas que as interpretam, ordenados pelo título da música.
-SELECT
+SELECT DISTINCT
 	m.musica_titulo,
     a.artista_nome
 FROM 
 	Musica m
-JOIN Artista a ON a.id_artista = m.id_artista
+JOIN Artista a ON m.id_artista = a.id_artista
 ORDER BY musica_titulo;
 
-select * from Musica;
-    
 # 5. Encontre os títulos das playlists que contêm a música com o título 'Arranhao'.
 SELECT 
 	p.playlist_titulo
@@ -491,9 +513,16 @@ GROUP BY
 HAVING 
 	a.artista_nome = 'Henrique e Juliano';
 
-#8. Encontre todos os artistas que não têm músicas.
-
-
+# 8.Encontre todos os artistas que não têm músicas.
+SELECT 
+	a.artista_nome
+FROM 
+	Artista a
+LEFT JOIN 
+	Musica m ON a.id_artista = m.id_artista
+WHERE 
+	m.id_artista IS NULL;
+    
 # 9. Liste todos os discos que contêm mais de 10 músicas.
 SELECT
 	d.disco_titulo,
@@ -507,30 +536,43 @@ GROUP BY
 HAVING 
 	COUNT(m.id_musica) > 10;
 
-# 10. Quais são os nomes dos artistas que têm discos lançados antes de 2010 e que têm músicas na playlist 'Top 50'?
-SELECT a.artista_nome, d.disco_data
+# 10. Quais são os nomes dos artistas que têm discos lançados antes de 2010 e que têm músicas na playlist 'Favoritas'?
+SELECT DISTINCT 
+	a.artista_nome, d.disco_data, p.playlist_titulo
 FROM 
 	Artista a
-JOIN
+JOIN 	
 	Disco d ON a.id_artista = d.id_artista
+JOIN
+	Musica m ON a.id_artista = m.id_artista
+JOIN
+	Musica_playlist mp ON mp.id_musica = m.id_musica
+JOIN
+	Playlist p ON mp.id_playlist = p.id_playlist
 WHERE
-	d.disco_data <= '2015-12-31' ;
-#Colocar Discos antes de 2009
+	d.disco_data < '2010-01-01' AND p.playlist_titulo = 'Favoritas';
 
 # 11. Quais músicas são interpretadas por mais de um artista?
-#Arrumar o codigo para isso
+SELECT m.musica_titulo
+FROM Musica m
+JOIN Artista a ON m.id_artista = a.id_artista
+GROUP BY m.musica_titulo
+HAVING COUNT(DISTINCT a.id_artista) > 1;
+
 
 # 12. Liste os títulos das músicas que aparecem em mais de uma playlist.
 SELECT 
-	m.musica_titulo, p.playlist_titulo
+	m.musica_titulo, m.id_musica
 FROM
-	Playlist p
+	Musica m
 JOIN
-	Musica_Playlist mp ON p.id_playlist = mp.id_playlist
-JOIN
-	Musica m ON mp.id_musica = m.id_musica;
-
-# 13. Encontre os nomes dos usuários que têm playlists que incluem a música 'Ele não vai mudar'.
+	Musica_Playlist mp ON m.id_musica = mp.id_musica
+GROUP BY
+	m.musica_titulo, m.id_musica
+HAVING 
+	COUNT(mp.id_playlist) > 1;
+    
+# 13. Encontre os nomes dos usuários que têm playlists que incluem a música 'A Sua Maneira'.
 SELECT 
 	u.usuario_nome, p.playlist_titulo, m.musica_titulo
 FROM 
@@ -542,7 +584,7 @@ JOIN
 JOIN 
 	Musica m ON mp.id_musica = m.id_musica
 WHERE 
-	m.musica_titulo = 'Ele Não Vai Mudar';
+	m.musica_titulo = 'A Sua Maneira';
 
 # 14. Qual é o título da música mais longa do disco 'Manifesto Musical'?
 SELECT 
@@ -558,13 +600,18 @@ ORDER BY
 LIMIT 1;
 
 # 15. Liste todos os discos lançados por um artista específico em um determinado ano.
-SELECT *
-FROM 
+SELECT 
+	d.*
+FROM
 	Disco d
 JOIN
 	Artista a ON d.id_artista = a.id_artista
-WHERE 
-	d.disco_data BETWEEN '2021-01-01' AND '2023-12-31';
+WHERE
+	a.artista_nome = 'Marcelo Falcao'
+AND YEAR
+	(d.disco_data) = 2001;
+    
+    select * from Disco;
 
 # 16. Quais são os nomes dos artistas que têm músicas em playlists criadas por um usuário específico?
 SELECT DISTINCT a.artista_nome, m.musica_titulo
@@ -628,6 +675,17 @@ ORDER BY
     p.playlist_titulo, m.musica_titulo, a.artista_nome; 
 
 # 19. Quais são os discos que contêm músicas de artistas que têm pelo menos 2 discos lançados?
+SELECT DISTINCT d.disco_titulo, a.artista_nome
+FROM Disco d
+JOIN Musica m ON d.id_disco = m.id_disco
+JOIN Artista a ON d.id_artista = a.id_artista
+WHERE a.id_artista IN (
+    SELECT id_artista
+    FROM Disco
+    GROUP BY id_artista
+    HAVING COUNT(id_disco) >= 2
+);
+
 # 20. Liste todos os usuários e suas playlists, mas apenas para playlists que contêm pelo menos 5 músicas?
 SELECT 
     u.usuario_nome, 
@@ -645,3 +703,5 @@ HAVING
     COUNT(mp.id_musica) >= 5
 ORDER BY 
     u.usuario_nome, p.playlist_titulo;
+    
+      
