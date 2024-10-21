@@ -1,5 +1,5 @@
-CREATE DATABASE pro;
-USE pro;
+CREATE DATABASE proj;
+USE proj;
 
 CREATE TABLE Artista(
 	id_artista INT unsigned not null auto_increment,
@@ -183,7 +183,7 @@ INSERT INTO Musica(musica_titulo, musica_duracao, id_artista, id_disco) VALUES
 	('Vento no Litoral', '00:06:06', 5, 6),
 	('Faroeste Caboclo', '00:09:07', 5, 6),
 	('Que País É Este', '00:02:57', 5, 6),
-	('Eduardo e Mônica', '00:04:32', 5, 6),
+	('Eduardo e Monica', '00:04:32', 5, 6),
     
 	#O Rappa 1994-10-19
 	('Catequeses do Medo', '00:03:55', 6, 7),
@@ -277,6 +277,9 @@ INSERT INTO Musica(musica_titulo, musica_duracao, id_artista, id_disco) VALUES
     ('Falar de Amor Não é Amar', '00:02:57', 8, 12),
     ('Rosas e Vinho Tinto', '00:02:51', 8, 12),
     ('Isabel', '00:03:04', 8, 12),
+    ('Será', '00:03:25', 8, 12),
+    ('Eduardo e Monica', '00:05:21', 8, 12),
+    ('Faroeste Caboclo', '00:08:07', 8, 12),
 
 #Instinto Coletivo Ao Vivo    2001-10-15
 ('Intro', '00:01:28', 6, 13),
@@ -553,11 +556,16 @@ WHERE
 	d.disco_data < '2010-01-01' AND p.playlist_titulo = 'Favoritas';
 
 # 11. Quais músicas são interpretadas por mais de um artista?
-SELECT m.musica_titulo
-FROM Musica m
-JOIN Artista a ON m.id_artista = a.id_artista
-GROUP BY m.musica_titulo
-HAVING COUNT(DISTINCT a.id_artista) > 1;
+SELECT
+	m.musica_titulo
+FROM
+	Musica m
+JOIN
+	Artista a ON m.id_artista = a.id_artista
+GROUP BY
+	m.musica_titulo
+HAVING 
+	COUNT(DISTINCT a.id_artista) > 1;
 
 
 # 12. Liste os títulos das músicas que aparecem em mais de uma playlist.
