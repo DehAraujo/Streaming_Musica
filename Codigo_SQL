@@ -340,7 +340,7 @@ INSERT INTO Musica_Playlist(id_usuario, id_musica, id_playlist) VALUES
 	(1,1,1),
 	(1,5,1),
 	(1,8,1),
-	1,9,1),
+	(1,9,1),
 	(1,10,1),
 	(1,154,1),
 	(1,165,1),
