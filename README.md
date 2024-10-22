@@ -1,6 +1,6 @@
-Como usar o programa de músicas:<br>
+**Como usar o programa de músicas:**<br>
 
-Pré-requisitos<br>
+**Pré-requisitos<br>**
 -Instale o MySQL e configure um banco de dados.<br>
 
 Executando o Programa:<br><br>
