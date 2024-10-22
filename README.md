@@ -1,27 +1,27 @@
-Como usar o programa de músicas:
+Como usar o programa de músicas:<br>
 
-Pré-requisitos
--Instale o MySQL e configure um banco de dados.
+Pré-requisitos<br>
+-Instale o MySQL e configure um banco de dados.<br>
 
-Executando o Programa:
--Para iniciar o programa abra seu MySQL
--Na interface escolha o banco de dados e clique no botão de execução para inicializar.
+Executando o Programa:<br><br>
+-Para iniciar o programa abra seu MySQL<br>
+-Na interface escolha o banco de dados e clique no botão de execução para inicializar.<br>
 
-Funcionalidades:
+Funcionalidades:<br>
 
-Cadastro de Usuário:
--Acesse a seção de cadastro de usuário.
--Preencha os campos necessários: nome, e-mail e data de registro.
--Clique no botão de execução para adicionar o usuário ao banco de dados.
+Cadastro de Usuário:<br>
+-Acesse a seção de cadastro de usuário.<br>
+-Preencha os campos necessários: nome, e-mail e data de registro.<br>
+-Clique no botão de execução para adicionar o usuário ao banco de dados.<br>
 
 
-Criação de Playlist
--Navegue até a seção de criação de playlists.
--Insira o título da nova playlist.
+Criação de Playlist<br>
+-Navegue até a seção de criação de playlists.<br>
+-Insira o título da nova playlist.<br>
 
-Adição de Músicas à Playlist
--Acesse a playlist que deseja editar.
--Insira as músicas que deseja adicionar à playlist.
+Adição de Músicas à Playlist.<br>
+-Acesse a playlist que deseja editar.<br>
+-Insira as músicas que deseja adicionar à playlist.<br>
 
 Gerenciamento de Playlists
 -Navegue até a seção Playlists para visualizar todas as playlists do usuário.
