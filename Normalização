@@ -1,7 +1,7 @@
 **Normalização:**
 
 **Tabela Artista**
-![Forma 3NF]/(https://github.com/DehAraujo/Streaming_Musica/blob/main/TabelaArtista.png?raw=true)
+![TabelaArtista]/(https://github.com/DehAraujo/Streaming_Musica/blob/main/TabelaArtista.png?raw=true)
 **1NF (Primeira Forma Normal)**<br>
 - Todos os atributos contêm valores atômicos (não divisíveis).<br>
 - Não há grupos repetitivos ou colunas multivaloradas.<br>
