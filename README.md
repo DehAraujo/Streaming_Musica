@@ -28,14 +28,7 @@
 -Clique em uma playlist para editar ou remover músicas.<br>
 -Faça as alterações desejadas e salve as mudanças.<br>
 
-**Exemplo do ambiente MySQL.<br>**
-![image](https://github.com/user-attachments/assets/6135fa3f-a0d3-4151-a295-5956d5c70503)
 
-
-# Streaming_Musica
-Fases:
-- Levantamento de requisitos
-- Identificação de Entidades, Atributos e Relacionamentos
 - Modelo E-R
   ![Diagrama](https://github.com/DehAraujo/Streaming_Musica/blob/main/Diagrama.jpg?raw=true)
 - Diagrama E-R
