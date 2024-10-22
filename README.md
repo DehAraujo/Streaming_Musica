@@ -23,12 +23,12 @@ Adição de Músicas à Playlist.<br>
 -Acesse a playlist que deseja editar.<br>
 -Insira as músicas que deseja adicionar à playlist.<br>
 
-Gerenciamento de Playlists
--Navegue até a seção Playlists para visualizar todas as playlists do usuário.
--Clique em uma playlist para editar ou remover músicas.
--Faça as alterações desejadas e salve as mudanças.
+Gerenciamento de Playlists<br>
+-Navegue até a seção Playlists para visualizar todas as playlists do usuário.<br>
+-Clique em uma playlist para editar ou remover músicas.<br>
+-Faça as alterações desejadas e salve as mudanças.<br>
 
-Exemplo do ambiente MySQL.
+Exemplo do ambiente MySQL.<br>
 ![image](https://github.com/user-attachments/assets/6135fa3f-a0d3-4151-a295-5956d5c70503)
 
 
