@@ -41,5 +41,7 @@
 
 ![Modelo](https://github.com/DehAraujo/Streaming_Musica/blob/main/Modelo.jpg?raw=true)
 
-![Diagrama](![image](https://github.com/user-attachments/assets/75521f24-1ea4-4fcc-9f8a-183a7a5f22bb))
+
+![Diagrama](https://github.com/user-attachments/assets/a338daa5-effd-4154-8d19-4f8e15b02eaa)
+
 
