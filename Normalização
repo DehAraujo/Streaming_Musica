@@ -1,0 +1,15 @@
+**Normalização:**
+
+**Tabela Artista**
+![Forma 3NF](https://github.com/DehAraujo/Streaming_Musica/blob/main/TabelaArtista.png?raw=true)
+**1NF (Primeira Forma Normal)**<br>
+- Todos os atributos contêm valores atômicos (não divisíveis).<br>
+- Não há grupos repetitivos ou colunas multivaloradas.<br>
+
+**2NF (Segunda Forma Normal)**<br>
+- Está em 1NF.<br>
+- Todos os atributos não-chave são totalmente funcionais dependentes da chave primária.<br>
+**3NF (Terceira Forma Normal)**
+- Está em 2NF.<br>
+- Os atributos artista_nome e artista_data não têm dependências entre si; ambos dependem exclusivamente da chave primária id_artista.<br>
+- Não há atributos que dependem de outros atributos não-chave.<br>
