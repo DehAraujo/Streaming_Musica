@@ -29,7 +29,7 @@
 -Faça as alterações desejadas e salve as mudanças.<br>
 
 
-** Diagrama E-R**
+**Diagrama E-R**
   ![Diagrama](https://github.com/DehAraujo/Streaming_Musica/blob/main/Diagrama.jpg?raw=true)
 
 
