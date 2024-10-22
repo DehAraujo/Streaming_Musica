@@ -3,32 +3,32 @@
 **Pré-requisitos<br>**
 -Instale o MySQL e configure um banco de dados.<br>
 
-Executando o Programa:<br><br>
+**Executando o Programa:<br><br>**
 -Para iniciar o programa abra seu MySQL<br>
 -Na interface escolha o banco de dados e clique no botão de execução para inicializar.<br>
 
-Funcionalidades:<br>
+**Funcionalidades:<br>**
 
-Cadastro de Usuário:<br>
+**Cadastro de Usuário:<br>**
 -Acesse a seção de cadastro de usuário.<br>
 -Preencha os campos necessários: nome, e-mail e data de registro.<br>
 -Clique no botão de execução para adicionar o usuário ao banco de dados.<br>
 
 
-Criação de Playlist<br>
+**Criação de Playlist<br>**
 -Navegue até a seção de criação de playlists.<br>
 -Insira o título da nova playlist.<br>
 
-Adição de Músicas à Playlist.<br>
+**Adição de Músicas à Playlist.<br>**
 -Acesse a playlist que deseja editar.<br>
 -Insira as músicas que deseja adicionar à playlist.<br>
 
-Gerenciamento de Playlists<br>
+**Gerenciamento de Playlists<br>**
 -Navegue até a seção Playlists para visualizar todas as playlists do usuário.<br>
 -Clique em uma playlist para editar ou remover músicas.<br>
 -Faça as alterações desejadas e salve as mudanças.<br>
 
-Exemplo do ambiente MySQL.<br>
+**Exemplo do ambiente MySQL.<br>**
 ![image](https://github.com/user-attachments/assets/6135fa3f-a0d3-4151-a295-5956d5c70503)
 
 
