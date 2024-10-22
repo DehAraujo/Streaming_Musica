@@ -2,10 +2,10 @@
 **Participantes:**<br>
 | Nome                                 | RA             |
 |--------------------------------------|----------------|
-| **Deise Adriana Silva Araújo**          | 22.222.024-6   |
-| **Lucas Rebouças Silva**                 | 22.122.048-6   |
-| **Victor Iak**                           | 22.122.057-7   |
-| **Vinícius Saidi de Araújo Soares**     | 22.122.064-3   |
+| **Deise Adriana Silva Araújo**          | **22.222.024-6**   |
+| **Lucas Rebouças Silva**                 | **22.122.048-6**   |
+| **Victor Iak**                           | **22.122.057-7**   |
+| **Vinícius Saidi de Araújo Soares**     | **22.122.064-3**   |
 
 **Como usar o programa de músicas:**<br>
 
