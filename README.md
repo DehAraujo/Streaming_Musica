@@ -32,9 +32,6 @@
 **Diagrama E-R**
   ![Diagrama](https://github.com/DehAraujo/Streaming_Musica/blob/main/Diagrama.jpg?raw=true)
 
-
 - ![Diagrama](https://github.com/DehAraujo/Streaming_Musica/blob/main/Modelo.jpg?raw=true)
-- Dicionário de dados
-- Normalização
-- Implementação
-- Testes básicos
+
+**Testes básicos**
