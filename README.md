@@ -37,6 +37,9 @@
 -Clique em uma playlist para editar ou remover músicas.<br>
 -Faça as alterações desejadas e salve as mudanças.<br>
 
-**Diagrama E-R**
+**Diagrama ER**
 
 ![Modelo](https://github.com/DehAraujo/Streaming_Musica/blob/main/Modelo.jpg?raw=true)
+
+![Diagrama](![image](https://github.com/user-attachments/assets/75521f24-1ea4-4fcc-9f8a-183a7a5f22bb)
+)
