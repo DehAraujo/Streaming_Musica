@@ -31,6 +31,7 @@
 
 - Modelo E-R
   ![Diagrama](https://github.com/DehAraujo/Streaming_Musica/blob/main/Diagrama.jpg?raw=true)
+
 - Diagrama E-R
 - Dicionário de dados
 - Normalização
