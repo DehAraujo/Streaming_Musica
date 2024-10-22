@@ -1,5 +1,0 @@
-Música: Cada música tem um título, uma duração (em segundos), e pertence a um disco específico. Cada música é interpretada por um ou mais artistas.
-Artista: Cada artista tem um nome e uma data de nascimento.
-Disco: Cada disco tem um título, uma data de lançamento, e pertence a um artista específico. Um disco pode conter várias músicas.
-Usuário: Cada usuário tem um nome, um e-mail (que deve ser único) e uma data de registro no sistema. Os usuários podem criar e gerenciar playlists.
-Playlist: Cada playlist tem um título e pertence a um único usuário. Uma playlist pode conter várias músicas, e uma música pode aparecer em várias playlists.
