@@ -1,3 +1,11 @@
+**Participantes:**
+Deise Adriana Silva Araújo –       RA: 22.222.024-6
+Lucas Rebouças Silva –             RA: 22.122.048-6
+Victor Iak -                       RA: 22.122.057-7
+Vinícius Saidi de Araújo Soares -  RA: 22.122.064-3
+
+
+
 **Como usar o programa de músicas:**<br>
 
 **Pré-requisitos<br>**
