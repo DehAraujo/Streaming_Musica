@@ -2,14 +2,14 @@ CREATE DATABASE proj;
 USE proj;
 
 CREATE TABLE Artista(
-	id_artista INT unsigned not null auto_increment,
+    id_artista INT unsigned not null auto_increment,
     artista_nome VARCHAR(100) not null,
     artista_data DATE not null,
     PRIMARY KEY(id_artista)
 );
 
 CREATE TABLE Disco(
-	id_disco INT unsigned not null auto_increment,
+    id_disco INT unsigned not null auto_increment,
     disco_titulo VARCHAR(100) not null,
     disco_data DATE not null,
     id_artista INT unsigned,
@@ -18,8 +18,8 @@ CREATE TABLE Disco(
 );
 
 CREATE TABLE Musica(
-	id_musica INT unsigned not null auto_increment,
-	musica_titulo VARCHAR(100) not null,
+    id_musica INT unsigned not null auto_increment,
+    musica_titulo VARCHAR(100) not null,
     musica_duracao TIME not null,
     id_artista INT unsigned,
     id_disco INT unsigned,
@@ -29,7 +29,7 @@ CREATE TABLE Musica(
 );
 
 CREATE TABLE Usuario(
-	id_usuario INT unsigned not null auto_increment,
+    id_usuario INT unsigned not null auto_increment,
     usuario_nome VARCHAR(100) not null,
     usuario_email VARCHAR(100) UNIQUE not null,
     usuario_dataregistro DATE not null,
@@ -37,7 +37,7 @@ CREATE TABLE Usuario(
 );
 
 CREATE TABLE Playlist(
-	id_playlist INT unsigned not null auto_increment,
+    id_playlist INT unsigned not null auto_increment,
     playlist_titulo VARCHAR(100) not null,
     id_usuario INT unsigned,
     PRIMARY KEY(id_playlist),
@@ -45,7 +45,7 @@ CREATE TABLE Playlist(
 );
 
 CREATE TABLE Musica_playlist(
-	id_musicaplaylist INT unsigned not null auto_increment,
+    id_musicaplaylist INT unsigned not null auto_increment,
     id_musica INT unsigned,
     id_playlist INT unsigned,
     id_usuario INT unsigned,
@@ -59,37 +59,37 @@ CREATE TABLE Musica_playlist(
     select * from Playlist;
     
 INSERT INTO Artista (artista_nome, artista_data) VALUES 
-	('Henrique e Juliano', '1989-11-23'),
+    ('Henrique e Juliano', '1989-11-23'),
     ('Gustavo Lima', '1989-09-03'),
     ('João Neto', '1979-08-12'),
-	('Marilha Mendonca', '1995-07-22'),
-	('Renato Russo', '1960-03-27'),
-	('Marcelo Falcao', '1973-05-31'),
-	('Luana Prado','1989-05-25'),
-	('Dinho Ouro Preto', '1964-04-27'),
+    ('Marilha Mendonca', '1995-07-22'),
+    ('Renato Russo', '1960-03-27'),
+    ('Marcelo Falcao', '1973-05-31'),
+    ('Luana Prado','1989-05-25'),
+    ('Dinho Ouro Preto', '1964-04-27'),
     ('Ana Castela', '2003-11-16'),
     ('Mari Fernandez','2001-02-19'),
     ('Simone Mendes', '1984-05-24'),
     ('Luan Santana', '1991-03-13');
 
 INSERT INTO Disco (disco_titulo, disco_data, id_artista) VALUES 
-	('Manifesto Musical', '2022-05-20', 1),
+    ('Manifesto Musical', '2022-05-20', 1),
     ('Buteco do Gustavo', '2015-07-24', 2),
     ('Ao Vivo em Vitória', '2014-04-21', 3),
-	('Marilha Mendonca ao Vivo', '2015-10-03', 4),
-	('Mais do Mesmo', '1998-03-03', 5),
-	('Perfil',  '2011-10-05', 5),
-	('O Rappa', '2001-10-19', 6),
-	('Acustico MTV', '2005-07-14', 6),
-	('Lado B Lado A', '1999-09-15', 6),
-	('7 Vezes', '2008-08-15', 6),
-	('Transcede', '2024-08-02', 7),
-	('Rosas e Vinho Tinto', '2002-04-14', 8),
+    ('Marilha Mendonca ao Vivo', '2015-10-03', 4),
+    ('Mais do Mesmo', '1998-03-03', 5),
+    ('Perfil',  '2011-10-05', 5),
+    ('O Rappa', '2001-10-19', 6),
+    ('Acustico MTV', '2005-07-14', 6),
+    ('Lado B Lado A', '1999-09-15', 6),
+    ('7 Vezes', '2008-08-15', 6),
+    ('Transcede', '2024-08-02', 7),
+    ('Rosas e Vinho Tinto', '2002-04-14', 8),
     ('Instinto Coletivo Ao Vivo', '2001-10-15', 6);
 
 INSERT INTO Musica(musica_titulo, musica_duracao, id_artista, id_disco) VALUES 
-	#Henrique e Juliano
-	('Arranhao', '00:02:34', 1, 1),
+    #Henrique e Juliano 
+    ('Arranhao', '00:02:34', 1, 1),
     ('De Garrafa a Pior', '00:03:45', 1, 1),
     ('Rasteira', '00:03:15', 1, 1),
     ('Mundo do Avesso', '00:04:00', 1, 1),
